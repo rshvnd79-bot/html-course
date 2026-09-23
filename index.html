@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="درس‌نامهٔ عمیق و پروژه‌محور HTML برای ساخت یک پرتفولیوی شخصی؛ همراه با کد کامل HTML، CSS هر بخش، فلش‌کارت و مرجع عناصر استاندارد.">
+<meta name="author" content="دورهٔ آموزش HTML">
+<meta name="theme-color" content="#17233b">
+<link rel="canonical" href="https://example.com/html-portfolio-course">
+<title>درس‌نامهٔ عمیق پروژهٔ پرتفولیو با HTML</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Course",
+  "name":"درس‌نامهٔ عمیق HTML با پروژهٔ پرتفولیو",
+  "description":"آموزش ساختار معنایی، فرم، جدول، رسانه، دسترس‌پذیری و SEO با کد کامل.",
+  "inLanguage":"fa",
+  "educationalLevel":"Beginner to Intermediate",
+  "teaches":["HTML","Semantic HTML","Forms","Tables","Multimedia","Accessibility","SEO"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">پرش به محتوای اصلی</a>
+<header class="top"><div class="wrap top-in">
+  <a class="brand" href="#top"><span class="brand-mark">&lt;/&gt;</span><span>آزمایشگاه HTML</span></a>
+  <nav aria-label="فهرست درس"><ul class="toc"><li><a href="#overview">نقشهٔ درس</a></li><li><a href="#lessons">کورس‌ها</a></li><li><a href="#reference">مرجع تگ‌ها</a></li><li><a href="#checklist">چک‌لیست</a></li></ul></nav>
+</div></header>
+<main id="main">
+<section class="hero" id="top"><div class="wrap hero-grid"><div>
+  <span class="eyebrow">DEEP HTML / PROJECT-BASED COURSE</span>
+  <h1>پروژه را <em>ریزبه‌ریز</em> بفهم؛ بعد خودت بساز.</h1>
+  <p class="lead">این فایل خودِ پروفایل نیست؛ دفترچهٔ آموزش ساخت پروفایل است. در هر کورس، شکل رابط را می‌بینی، فلش ارتباط را دنبال می‌کنی، اول CSS همان بخش را در تگ <code>&lt;style&gt;</code> می‌خوانی و بعد کد کامل HTML داخل <code>&lt;body&gt;</code> را می‌بینی.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#lessons">شروع کورس‌ها ↓</a><a class="btn btn-secondary" href="#reference">دیدن مرجع همهٔ تگ‌ها</a></div>
+</div><aside class="hero-board" aria-label="روش مطالعهٔ درس"><div class="window"><div class="window-bar"><i></i><i></i><i></i><span class="window-url">html-course.html</span></div><div class="board-body"><h2>UI ← CSS ← HTML</h2><p>پیش‌نمایش، استایل و ساختار را کنار هم مقایسه کن.</p><div class="board-lines"><span></span><span></span><span></span></div><div class="pills" style="margin-top:1rem"><span class="pill">۱۲ کورس</span><span class="pill">۴۰+ فلش‌کارت</span><span class="pill">کد کامل</span></div></div></div></aside>
+</div></section>
+<section class="section" id="overview"><div class="wrap"><div class="section-title"><div><span class="label">۰ / نقشهٔ یادگیری</span><h2>این درس‌نامه چه دارد؟</h2></div><p>از پوستهٔ سند شروع می‌کنیم و به مرجع عناصر Living Standard می‌رسیم؛ هر مرحله با یک جزء واقعی از تمرین پرتفولیو توضیح داده شده.</p></div>
+<div class="full-index">
+<div><b>کورس ۰</b><span>سند، زبان، جهت و متادیتا</span></div><div><b>کورس ۱</b><span>متن و معنای متن</span></div><div><b>کورس ۲</b><span>فهرست‌ها: ul، ol، dl، menu</span></div><div><b>کورس ۳</b><span>جدول کامل و دسترس‌پذیر</span></div><div><b>کورس ۴</b><span>ناوبری و همهٔ نوع‌های لینک</span></div><div><b>کورس ۵</b><span>تصویر واکنش‌گرا و figure</span></div><div><b>کورس ۶</b><span>فرم‌ها و کنترل‌های input</span></div><div><b>کورس ۷</b><span>صوت، ویدیو، track و iframe</span></div><div><b>کورس ۸</b><span>ساختار معنایی و landmarks</span></div><div><b>کورس ۹</b><span>details، dialog، popover، progress</span></div><div><b>کورس ۱۰</b><span>script، template، slot و داده</span></div><div><b>کورس ۱۱</b><span>مرجع جامع عناصر HTML امروز</span></div>
+</div><div class="warning"><b>روش استفاده:</b> اول کد کامل را بدون کپی‌کردن بخوان، سپس یک نسخهٔ کوچک از همان بخش را خودت تایپ کن. فقط وقتی فلش‌کارت را باز کن که بخواهی دلیل انتخاب تگ را مرور کنی.</div>
+</div></section>
+<div class="wrap learning-strip" aria-label="پیشرفت دوره"><div><strong>مسیر یادگیری</strong><br><small data-progress-text>۰ از ۱۲ درس</small></div><div class="progress-track" aria-hidden="true"><i></i></div><a class="btn btn-secondary" href="#lessons" style="min-height:36px;padding:.35rem .65rem;font-size:.75rem">ادامه</a></div>
+<section class="section" id="lessons"><div class="wrap"><div class="section-title"><div><span class="label">۱ / کورس‌ها</span><h2>کد، استایل و فلش‌کارت</h2></div><p>استایل هر بخش عمداً بالای کد آمده تا یاد بگیری شکل رنگی/کادری رابط از کدام selector، property و value ساخته شده است.</p></div>
+<article class="lesson" id="l0">
+<div class="lesson-head"><span class="num">۰</span><div><h3>سند، زبان و متادیتا — ریزترین نکات</h3><p>از <!doctype> تا </html>: چه چیزی در head می‌آید و هر meta چه دقیقاً می‌کند.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="0" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>شناخت سند: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>یک صفحهٔ فارسی بساز که lang، dir، charset، viewport، title و description را درست تنظیم کند.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>در پایان سورس head را خودت از حفظ بازسازی کن.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k0-box">
+  <h4>پرتفولیوی شما</h4>
+  <p>صفحه‌ای که مرورگر در حالت استاندارد و راست‌به‌چپ می‌خواند.</p>
+  <span class="k0-badge">&lt;!DOCTYPE html&gt;</span>
+  <span class="k0-badge">lang="fa"</span>
+  <span class="k0-badge">dir="rtl"</span>
+  <span class="k0-badge">charset="UTF-8"</span>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k0-box{
+  <i>background</i>:<u>#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem</u>;
+  <i>box-shadow</i>:<u>0 10px 30px -18px rgba(23,35,59,.4)</u>;
+}
+.k0-box h4{margin:.1rem 0 .35rem;font-size:1.05rem}
+.k0-box p{margin:0;color:#637089;font-size:.86rem}
+.k0-badge{
+  <i>display</i>:<u>inline-block;font:700 .72rem/1.6 "Space Grotesk",monospace</u>;
+  <i>background</i>:<u>#e9efff;color:#315ed2;border-radius:99px;padding:.1rem .55rem</u>;
+  <i>margin</i>:<u>.35rem .2rem 0 0;direction:ltr</u>;
+}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;!DOCTYPE html&gt;
+&lt;<b>html</b> <i>lang</i>=<u>"fa"</u> <i>dir</i>=<u>"rtl"</u>&gt;
+  &lt;<b>head</b>&gt;
+    &lt;<b>meta</b> <i>charset</i>=<u>"UTF-8"</u>&gt;
+    &lt;<b>meta</b> <i>name</i>=<u>"viewport"</u> <i>content</i>=<u>"<i>width</i>=device-width, <i>initial-scale</i>=1"</u>&gt;
+    &lt;<b>meta</b> <i>name</i>=<u>"description"</u> <i>content</i>=<u>"پرتفولیوی شما؛ نمونه‌کارها و راه‌های تماس."</u>&gt;
+    &lt;<b>meta</b> <i>name</i>=<u>"author"</u> <i>content</i>=<u>"نام شما"</u>&gt;
+    &lt;<b>meta</b> <i>name</i>=<u>"theme-color"</u> <i>content</i>=<u>"#17233b"</u>&gt;
+    &lt;<b>link</b> <i>rel</i>=<u>"canonical"</u> <i>href</i>=<u>"https://example.com/"</u>&gt;
+    &lt;<b>link</b> <i>rel</i>=<u>"icon"</u> <i>href</i>=<u>"/favicon.ico"</u> <i>sizes</i>=<u>"any"</u>&gt;
+    &lt;<b>title</b>&gt;پرتفولیوی شما | توسعه‌دهندهٔ فرانت‌اند&lt;/<b>title</b>&gt;
+  &lt;/<b>head</b>&gt;
+  &lt;<b>body</b>&gt;
+    &lt;<b>header</b> <i>class</i>=<u>"k0-header"</u>&gt;
+      &lt;<b>h1</b>&gt;پرتفولیوی شما&lt;/<b>h1</b>&gt;
+      &lt;<b>p</b>&gt;صفحه‌ای که مرورگر در حالت استاندارد و راست‌به‌چپ می‌خواند.&lt;/<b>p</b>&gt;
+      &lt;<b>div</b> <i>class</i>=<u>"k0-badges"</u>&gt;
+        &lt;<b>span</b> <i>class</i>=<u>"k0-badge"</u>&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/<b>span</b>&gt;
+        &lt;<b>span</b> <i>class</i>=<u>"k0-badge"</u>&gt;<i>lang</i>=<u>"fa"</u>&lt;/<b>span</b>&gt;
+        &lt;<b>span</b> <i>class</i>=<u>"k0-badge"</u>&gt;<i>dir</i>=<u>"rtl"</u>&lt;/<b>span</b>&gt;
+        &lt;<b>span</b> <i>class</i>=<u>"k0-badge"</u>&gt;<i>charset</i>=<u>"UTF-8"</u>&lt;/<b>span</b>&gt;
+      &lt;/<b>div</b>&gt;
+    &lt;/<b>header</b>&gt;
+  &lt;/<b>body</b>&gt;
+&lt;/<b>html</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li>ترتیب head مهم است: <b>charset</b> باید در ۱۰۲۴ بایت اول باشد، وگرنه مرورگر قبل از فهم کدگذاری شروع به خواندن می‌کند.</li><li><b>title</b> و <b>meta description</b> برای هر صفحه یکتا باشند؛ برای هر صفحه بهتر است متناسب با محتوای همان صفحه تنظیم شوند؛ این کار به درک بهتر سند و نمایش مناسب‌تر در نتایج کمک می‌کند.</li><li><b>viewport</b> شرط لازم طراحی واکنش‌گراست؛ از <code>user-scalable=no</code> و محدودکردن بزرگ‌نمایی کاربر پرهیز کن؛ بزرگ‌نمایی برای دسترس‌پذیری مهم است.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>DOCTYPE امروز چه نقشی دارد؟<small>یک سوییچ، نه یک نسخه</small></span></summary><div class="flash-body"><ul><li>node ۱: <code>&lt;!DOCTYPE html&gt;</code> دیگر نسخهٔ HTML را اعلام نمی‌کند؛ فقط مرورگر را به «حالت استاندارد» می‌برد.</li><li>بدون آن، مرورگر ممکن است وارد «quirks mode» شود و برخی رفتارهای تاریخی، از جمله تفاوت‌های مدل جعبه، فعال شوند.</li><li>برای آموزش دقیق‌تر، تفاوت مدل جعبه را به‌صورت تاریخی بررسی کن؛ این رفتار برای همهٔ عناصر و همهٔ شرایط یکسان نیست.</li><li>پس هر اختلاف ظاهری عجیب در مرورگرهای قدیمی را اول با نبود DOCTYPE بررسی کن.</li></ul></div></details>
+<details class="flash"><summary><span>مقادیر مجاز lang چه هستند؟<small>از BCP 47 استفاده کن</small></span></summary><div class="flash-body"><ul><li>زبان با کد زبان و در صورت نیاز کد منطقه نوشته می‌شود: <code>fa</code>، <code>fa-IR</code>، <code>en-US</code>.</li><li><code>fa-IR</code> زبان فارسی با منطقهٔ ایران را دقیق‌تر توصیف می‌کند؛ اینکه تلفظ چگونه انجام شود به مرورگر، سیستم‌عامل و موتور تبدیل متن به گفتار بستگی دارد.</li><li>برای بخش لاتین داخل صفحه فارسی، <code>lang="en"</code> را روی همان عنصر بگذار.</li><li>attr q: تفاوت <code>lang</code> و <code>xml:lang</code> — در HTML5 فقط <code>lang</code> لازم است.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l1">
+<div class="lesson-head"><span class="num">۱</span><div><h3>متن و معنای متن — همهٔ تگ‌های متنی</h3><p>از h1 تا ruby؛ تفاوت معنایی و کاربرد دقیق هر تگ متنی.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="1" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>معنای متن: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>یک معرفی شخصی بنویس و برای اهمیت، تأکید، نقل‌قول، کد، زمان، ویرایش و اختصار از عنصر معنایی مناسب استفاده کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>هر تگ را فقط وقتی استفاده کن که معنایش با محتوا جور باشد.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k1-article">
+  <h2>عنوان اصلی بخش</h2>
+  <h3>زیرعنوان سطح دو</h3>
+  <p>این یک <strong>متن مهم</strong> و این یک <em>تأکید</em> است. این <mark>برجسته</mark> شده و این <small>متن کنار</small> است.</p>
+  <p>فرمول آب: H<sub>2</sub>O — عدد توان: ۲<sup>۳</sup> = ۸</p>
+  <blockquote cite="https://example.com">«طراحی خوب دیده نمی‌شود؛ فقط کار می‌کند.»<cite>— نقل‌شده در مصاحبه</cite></blockquote>
+  <p>تگ <code>&lt;code&gt;</code> برای کد درون‌خطی است. قیمت قبلی <del>۲۰۰</del> و جدید <ins>۱۵۰</ins>.</p>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k1-article{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem;font-size:.9rem}
+.k1-article h2{margin:.1rem 0 .4rem;font-size:1.2rem}
+.k1-article h3{margin:.5rem 0 .2rem;font-size:1rem;color:#315ed2}
+.k1-article mark{background:#fff3b0;padding:0 .2rem;border-radius:4px}
+.k1-article small{color:#637089;display:block}
+.k1-article blockquote{
+  <i>margin</i>:<u>.7rem 0;padding:.5rem .8rem;border-right:4px solid #d95432</u>;
+  <i>background</i>:<u>#fff0eb;border-radius:0 10px 10px 0;color:#4a3729</u>;
+}
+.k1-article code{
+  <i>direction</i>:<u>ltr;display:inline-block;background:#eef2fa;color:#28478f</u>;
+  <i>border-radius</i>:<u>5px;padding:0 .3rem;font:12px monospace</u>;
+}
+.k1-article blockquote cite{display:block;font-size:.8rem;color:#637089;margin-top:.2rem}
+.k1-article del{color:#b0463a}
+.k1-article ins{color:#147955;text-decoration:none;border-bottom:1px dashed #147955}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>article</b> <i>class</i>=<u>"k1-article"</u>&gt;
+  &lt;<b>h2</b>&gt;عنوان اصلی بخش&lt;/<b>h2</b>&gt;
+  &lt;<b>h3</b>&gt;زیرعنوان سطح دو&lt;/<b>h3</b>&gt;
+
+  &lt;<b>p</b>&gt;
+    این یک &lt;<b>strong</b>&gt;متن مهم&lt;/<b>strong</b>&gt; و این یک &lt;<b>em</b>&gt;تأکید&lt;/<b>em</b>&gt; است.
+    این &lt;<b>mark</b>&gt;برجسته&lt;/<b>mark</b>&gt; شده و این &lt;<b>small</b>&gt;متن کنار&lt;/<b>small</b>&gt; است.
+  &lt;/<b>p</b>&gt;
+
+  &lt;<b>p</b>&gt;
+    فرمول آب: H&lt;<b>sub</b>&gt;2&lt;/<b>sub</b>&gt;O — عدد توان: ۲&lt;<b>sup</b>&gt;۳&lt;/<b>sup</b>&gt; = ۸
+  &lt;/<b>p</b>&gt;
+
+  &lt;<b>blockquote</b> <i>cite</i>=<u>"https://example.com"</u>&gt;
+    «طراحی خوب دیده نمی‌شود؛ فقط کار می‌کند.»
+    &lt;<b>cite</b>&gt;— نقل‌شده در مصاحبه&lt;/<b>cite</b>&gt;
+  &lt;/<b>blockquote</b>&gt;
+
+  &lt;<b>p</b>&gt;
+    تگ &lt;<b>code</b>&gt;&amp;lt;code&amp;gt;&lt;/<b>code</b>&gt; برای کد درون‌خطی است.
+    قیمت قبلی &lt;<b>del</b>&gt;۲۰۰&lt;/<b>del</b>&gt; و جدید &lt;<b>ins</b>&gt;۱۵۰&lt;/<b>ins</b>&gt;.
+  &lt;/<b>p</b>&gt;
+&lt;/<b>article</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>strong/em</b> معنا دارند؛ <b>b/i</b> هم کاربرد معنایی دارند اما «اهمیت» یا «تأکید» را بیان نمی‌کنند. برای ظاهرِ صرف از CSS استفاده کن.</li><li><b>mark</b> متنِ مرتبط یا برجسته در زمینهٔ فعلی را مشخص می‌کند؛ جست‌وجو یکی از کاربردهای رایج آن است، نه تنها کاربرد.</li><li><b>cite</b> باید عنوان اثر باشد، نه نام نویسنده؛ نام در متن می‌آید.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>strong و b واقعاً چه تفاوتی دارند؟<small>معنا در برابر ظاهر</small></span></summary><div class="flash-body"><ul><li><code>strong</code> اهمیت زیاد را در معنا مشخص می‌کند؛ نحوهٔ اعلام آن توسط فناوری کمکی می‌تواند متفاوت باشد.</li><li><code>b</code> برای جلب توجه بدون انتقال اهمیت ویژه به‌کار می‌رود؛ اگر صرفاً ظاهر می‌خواهی، CSS انتخاب بهتری است.</li><li><code>em</code> تأکید در جمله است و لحن را عوض می‌کند: «من <em>این</em> را نگفتم».</li><li><code>i</code> برای اصطلاح بیگانه یا فنی است، مثل نام لاتین یک گونه.</li></ul></div></details>
+<details class="flash"><summary><span>del و ins چه زمانی درست پیاده می‌شوند؟<small>تغییرات نسخه‌ای</small></span></summary><div class="flash-body"><ul><li><code>del</code> متن حذف‌شده و <code>ins</code> متن افزوده‌شده را نشان می‌دهند.</li><li>هر دو <code>datetime</code> و <code>cite</code> می‌پذیرند تا زمان و منبع تغییر ثبت شود.</li><li>در متن حقوقی یا نسخهٔ سند، این دو با رنگ و خط‌خوردگی معنا را می‌رسانند.</li><li>به‌جای دوتایی‌کردن متن با رنگ، از همین تگ‌ها استفاده کن.</li></ul></div></details>
+<details class="flash"><summary><span>blockquote و q چه فرقی دارند؟<small>بلوکی در برابر درون‌خطی</small></span></summary><div class="flash-body"><ul><li><code>blockquote</code> نقل‌قول بلوکی است و معمولاً تودرتویی/تورفتگی می‌گیرد.</li><li><code>q</code> نقل‌قول کوتاه درون‌خطی است و مرورگر خودش گیومه اضافه می‌کند.</li><li>منبع نقل‌قول را در <code>cite</code> بگذار؛ خودِ عنصر cite باید نام اثر باشد، نه آدرس.</li><li>اگر فقط متن کج و گیومه می‌خواهی، متن سادهٔ داخل p کافی است.</li></ul></div></details>
+<details class="flash"><summary><span>time، abbr و dfn را چرا بنویسیم؟<small>قابل فهم برای ماشین و انسان</small></span></summary><div class="flash-body"><ul><li><code>time datetime="2024-05-01"</code> تاریخ خوانا برای ماشین می‌سازد.</li><li><code>abbr title="HyperText Markup Language"</code> مخفف را برای صفحه‌خوان باز می‌کند.</li><li><code>dfn</code> جای تعریف اصطلاح است و با اولین کاربرد آن می‌آید.</li><li>این‌ها به سئو و دسترس‌پذیری همزمان کمک می‌کنند.</li></ul></div></details>
+<details class="flash"><summary><span>sub، sup، wbr و br کجا؟<small>کنترل دقیق متن</small></span></summary><div class="flash-body"><ul><li><code>sub</code> پایین‌نویس (H₂O) و <code>sup</code> بالانویس (۲³) است.</li><li><code>wbr</code> نقطهٔ شکست اختیاری در کلمات بلند است، مثل <code>example<wbr>domain.com</code>.</li><li><code>br</code> فقط شکست خط در متن‌هایی مثل آدرس یا شعر است، نه برای فاصلهٔ چیدمانی.</li><li>برای فاصله از CSS margin استفاده کن، نه چند <code>br</code> پشت‌هم.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l2">
+<div class="lesson-head"><span class="num">۲</span><div><h3>فهرست‌ها: ul، ol، dl و menu</h3><p>هر نوع فهرست با تگ دقیقش، همراه مثال زنده و کد کامل طراحی‌شده.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="2" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>فهرست‌ها: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>منوی ناوبری، فهرست مراحل و یک واژه‌نامهٔ کوتاه بساز و نوع فهرست هرکدام را توضیح بده.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>برای ناوبری از nav + ul شروع کن.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k2-card">
+  <ul><li>مهارت اول — فهرست بدون ترتیب</li><li>مهارت دوم</li><li>مهارت سوم</li></ul>
+  <ol><li>طراحی ساختار</li><li>نوشتن کد</li><li>آزمایش دسترس‌پذیری</li></ol>
+  <dl><dt>نقش</dt><dd>توسعه‌دهندهٔ فرانت‌اند</dd><dt>شهر</dt><dd>تهران / دورکاری</dd></dl>
+  <menu><li>خانه</li><li>پروژه‌ها</li><li>تماس</li></menu>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k2-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k2-card ul{
+  <i>list-style</i>:<u>none;margin:0;padding:0;display:grid;gap:.4rem</u>;
+}
+.k2-card ul li{
+  <i>background</i>:<u>#f4f7fc;border-right:3px solid #315ed2;border-radius:8px</u>;
+  <i>padding</i>:<u>.35rem .6rem;font-size:.86rem</u>;
+}
+.k2-card ol{
+  <i>margin</i>:<u>.7rem 0 0;padding-right:1.3rem;color:#17233b;font-size:.86rem</u>;
+}
+.k2-card ol li{margin:.25rem 0}
+.k2-card dl{
+  <i>margin</i>:<u>.7rem 0 0;display:grid;grid-template-columns:auto 1fr</u>;
+  <i>gap</i>:<u>.25rem .8rem;font-size:.86rem</u>;
+}
+.k2-card dt{font-weight:800;color:#d95432}
+.k2-card dd{margin:0;color:#637089}
+.k2-card menu{
+  <i>display</i>:<u>flex;gap:.4rem;list-style:none;margin:.7rem 0 0;padding:0;flex-wrap:wrap</u>;
+}
+.k2-card menu li{
+  <i>background</i>:<u>#e9efff;color:#315ed2;border-radius:99px;padding:.12rem .55rem;font-size:.76rem</u>;
+}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k2-card"</u> <i>aria-labelledby</i>=<u>"k2-title"</u>&gt;
+  &lt;<b>h2</b> <i>id</i>=<u>"k2-title"</u>&gt;فهرست‌ها با معنای درست&lt;/<b>h2</b>&gt;
+
+  &lt;<b>ul</b>&gt;
+    &lt;<b>li</b>&gt;مهارت اول — فهرست بدون ترتیب&lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;مهارت دوم&lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;مهارت سوم&lt;/<b>li</b>&gt;
+  &lt;/<b>ul</b>&gt;
+
+  &lt;<b>ol</b> <i>start</i>=<u>"1"</u> reversed&gt;
+    &lt;<b>li</b>&gt;طراحی ساختار&lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;نوشتن کد&lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;آزمایش دسترس‌پذیری&lt;/<b>li</b>&gt;
+  &lt;/<b>ol</b>&gt;
+
+  &lt;<b>dl</b>&gt;
+    &lt;<b>dt</b>&gt;نقش&lt;/<b>dt</b>&gt;&lt;<b>dd</b>&gt;توسعه‌دهندهٔ فرانت‌اند&lt;/<b>dd</b>&gt;
+    &lt;<b>dt</b>&gt;شهر&lt;/<b>dt</b>&gt;&lt;<b>dd</b>&gt;تهران / دورکاری&lt;/<b>dd</b>&gt;
+  &lt;/<b>dl</b>&gt;
+
+  &lt;<b>menu</b>&gt;
+    &lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"#projects"</u>&gt;پروژه‌ها&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"#contact"</u>&gt;تماس&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;
+  &lt;/<b>menu</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>ol</b> سه ویژگی مهم دارد: <code>start</code>، <code>reversed</code> و <code>type</code>.</li><li><b>dl</b> برای جفت واژه/توضیح است؛ می‌توانی یک dt را با چند dd توضیح بدهی.</li><li><b>menu</b> امروز هم‌معنی ul است؛ برای فهرست دستورات/کنترل‌ها به کار می‌رود.</li><li>هیچ لیستی را با div شبیه‌سازی نکن؛ صفحه‌خوان تعداد آیتم‌ها را اعلام می‌کند.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>ol چه ویژگی‌هایی برای کنترل شماره دارد؟<small>start / reversed / type</small></span></summary><div class="flash-body"><ul><li><code>start="5"</code> شمارش را از ۵ شروع می‌کند.</li><li><code>reversed</code> شمارش را برعکس می‌کند؛ برای رتبه‌بندی معکوس.</li><li><code>type</code> مقادیر 1، A، a، I، i را می‌پذیرد (استفاده ازش با CSS هم ممکن است).</li><li>برای استایل ظاهری شماره‌ها از <code>list-style-type</code> هم می‌توانی استفاده کنی.</li></ul></div></details>
+<details class="flash"><summary><span>dl دقیقاً برای چه ساخته شده؟<small>گروه واژه و توضیح</small></span></summary><div class="flash-body"><ul><li>هر <code>dt</code> یک اصطلاح و هر <code>dd</code> توضیح آن است.</li><li>یک dt می‌تواند چند dd داشته باشد (چند معنی).</li><li>برای مشخصات محصول، واژه‌نامهٔ پروژه و تنظیمات کلید/مقدار مناسب است.</li><li>در HTML بعدی می‌پذیری با <code>div</code> را می‌پذیرد تا wrapper بگذاری.</li></ul></div></details>
+<details class="flash"><summary><span>هرگز لیست را با div نساز<small>چرا صفحه‌خوان فرق می‌کند</small></span></summary><div class="flash-body"><ul><li>صفحه‌خوان اعلام می‌کند «فهرست، ۳ آیتم» و کاربر می‌تواند آیتم‌ها را مرور کند.</li><li>با div این اطلاعات وجود ندارد و کاربر یکی‌یکی همه‌چیز را می‌شنود.</li><li>برای پرش بین آیتم‌ها، لیست‌های معنایی سریع‌تر قابل مرورند.</li><li>اگر فقط چیدمان می‌خواهی، از <code>list-style:none</code> استفاده کن، نه حذف تگ li.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l3">
+<div class="lesson-head"><span class="num">۳</span><div><h3>جدول‌ها: table، caption، thead، tbody، tfoot، colgroup</h3><p>ساخت جدول کامل و دسترس‌پذیر با همهٔ تگ‌های جدول و ویژگی‌های ارتباطی.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="3" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>جدول: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>جدول پروژه‌ها را با caption، سرستون‌های مشخص، scope و نسخهٔ قابل اسکرول در موبایل بساز.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>در موبایل جدول را مجبور به شکستن ستون‌هایش نکن.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k3-wrap">
+<table class="k3-table">
+  <caption>سوابق آموزشی و دوره‌ها</caption>
+  <colgroup><col span="2"><col class="k3-hot"></colgroup>
+  <thead><tr><th scope="col">دوره</th><th scope="col">سال</th><th scope="col">نمره</th></tr></thead>
+  <tbody><tr><td>Front-end</td><td>۱۴۰۳</td><td>۱۹٫۵</td></tr><tr><td>دسترس‌پذیری</td><td>۱۴۰۳</td><td>۲۰</td></tr></tbody>
+  <tfoot><tr><td>میانگین</td><td colspan="2">۱۹٫۷۵</td></tr></tfoot>
+</table>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k3-wrap{background:#fff;border:1px solid #dbe3ef;border-radius:14px;overflow:auto;padding:.5rem}
+.k3-table{
+  <i>width</i>:<u>100%;min-width:420px;border-collapse:collapse;font-size:.84rem</u>;
+}
+.k3-table caption{
+  <i>text-align</i>:<u>right;padding:.5rem;color:#147955;font-weight:800</u>;
+}
+.k3-table th,.k3-table td{
+  <i>text-align</i>:<u>right;padding:.5rem;border-bottom:1px solid #dbe3ef</u>;
+}
+.k3-table thead th{background:#e9efff;color:#315ed2}
+.k3-table tbody tr:nth-child(even){background:#f7f9fd}
+.k3-table tfoot td{
+  <i>background</i>:<u>#e3f7ee;color:#147955;font-weight:700</u>;
+}
+.k3-table col.k3-hot{background:#fff7f4}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>div</b> <i>class</i>=<u>"k3-wrap"</u>&gt;
+  &lt;<b>table</b> <i>class</i>=<u>"k3-table"</u>&gt;
+    &lt;<b>caption</b>&gt;سوابق آموزشی و دوره‌ها&lt;/<b>caption</b>&gt;
+
+    &lt;<b>colgroup</b>&gt;
+      &lt;<b>col</b> <i>span</i>=<u>"2"</u>&gt;
+      &lt;<b>col</b> <i>class</i>=<u>"k3-hot"</u>&gt;
+    &lt;/<b>colgroup</b>&gt;
+
+    &lt;<b>thead</b>&gt;
+      &lt;<b>tr</b>&gt;
+        &lt;<b>th</b> <i>scope</i>=<u>"col"</u>&gt;دوره&lt;/<b>th</b>&gt;
+        &lt;<b>th</b> <i>scope</i>=<u>"col"</u>&gt;سال&lt;/<b>th</b>&gt;
+        &lt;<b>th</b> <i>scope</i>=<u>"col"</u>&gt;نمره&lt;/<b>th</b>&gt;
+      &lt;/<b>tr</b>&gt;
+    &lt;/<b>thead</b>&gt;
+
+    &lt;<b>tbody</b>&gt;
+      &lt;<b>tr</b>&gt;
+        &lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;Front-end&lt;/<b>th</b>&gt;
+        &lt;<b>td</b>&gt;۱۴۰۳&lt;/<b>td</b>&gt;
+        &lt;<b>td</b>&gt;۱۹٫۵&lt;/<b>td</b>&gt;
+      &lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;
+        &lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;دسترس‌پذیری&lt;/<b>th</b>&gt;
+        &lt;<b>td</b>&gt;۱۴۰۳&lt;/<b>td</b>&gt;
+        &lt;<b>td</b>&gt;۲۰&lt;/<b>td</b>&gt;
+      &lt;/<b>tr</b>&gt;
+    &lt;/<b>tbody</b>&gt;
+
+    &lt;<b>tfoot</b>&gt;
+      &lt;<b>tr</b>&gt;
+        &lt;<b>td</b>&gt;میانگین&lt;/<b>td</b>&gt;
+        &lt;<b>td</b> <i>colspan</i>=<u>"2"</u>&gt;۱۹٫۷۵&lt;/<b>td</b>&gt;
+      &lt;/<b>tr</b>&gt;
+    &lt;/<b>tfoot</b>&gt;
+  &lt;/<b>table</b>&gt;
+&lt;/<b>div</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>caption</b> باید اولین فرزند table باشد؛ نام جدول را می‌دهد.</li><li><b>colgroup/col</b> امکان استایل‌دهی ستونی را می‌دهد؛ <code>span</code> چند ستون را می‌گیرد.</li><li><b>scope</b> رابطهٔ سرستون/سرسطر با داده را برای فناوری کمکی روشن می‌کند.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>scope دقیقاً چه چیزی را حل می‌کند؟<small>اتصال سرستون به داده</small></span></summary><div class="flash-body"><ul><li>صفحه‌خوان هنگام خواندن هر سلول می‌گوید «دوره: Front-end، سال: ۱۴۰۳».</li><li><code>scope="col"</code> برای th ستونی و <code>scope="row"</code> برای th سطری است.</li><li>در جدول‌های پیچیده یا thهای متعدد، <code>headers</code> و <code>id</code> جایگزین دقیق‌تری است.</li><li>سلول خالی را با <code>&nbsp;</code> پر نکن؛ اگر داده ندارد، خالی بگذار یا با CSS مدیریت کن.</li></ul></div></details>
+<details class="flash"><summary><span>colspan و rowspan چه زمانی لازم‌اند؟<small>ادغام سلول‌ها</small></span></summary><div class="flash-body"><ul><li><code>colspan="2"</code> سلول را روی دو ستون بسط می‌دهد.</li><li><code>rowspan</code> همین کار را برای سطرها انجام می‌دهد.</li><li>اگر ساختار جدول را با ادغام بی‌دلیل خراب کنی، صفحه‌خوان گیج می‌شود.</li><li>برای جدول‌های چیدمانی از این ویژگی‌ها سوءاستفاده نکن؛ table فقط برای دادهٔ جدولی است.</li></ul></div></details>
+<details class="flash"><summary><span>thead, tbody, tfoot چه فایده‌ای دارند؟<small>ساختار سه‌بخشی</small></span></summary><div class="flash-body"><ul><li>سرستون‌ها در thead، داده‌ها در tbody و جمع‌بندی در tfoot می‌آید.</li><li>مرورگر می‌تواند هنگام چاپ، thead را در هر صفحه تکرار کند.</li><li>tfoot باید بعد از tbody در کد بیاید (نه اول جدول).</li><li>این سه تگ را می‌توانی با CSS جداگانه استایل بدهی.</li></ul></div></details>
+<details class="flash"><summary><span>برای جدول بزرگ چه نکاتی هست؟<small>قابل استفاده در موبایل</small></span></summary><div class="flash-body"><ul><li>جدول را داخل ظرفی با <code>overflow-x:auto</code> بگذار تا در موبایل افقی اسکرول بخورد.</li><li>از <code>border-collapse:collapse</code> برای نبود فاصلهٔ دولایه استفاده کن.</li><li>برای سطرهای بلند، ارتفاع ثابت و <code>text-overflow</code> جایگزین حذف داده نکن.</li><li>همیشه یک نام <caption> بنویس؛ این بهترین توضیح برای کاربر صفحه‌خوان است.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l4">
+<div class="lesson-head"><span class="num">۴</span><div><h3>ناوبری و لینک‌ها: a، nav و همهٔ انواع href</h3><p>لینک داخلی، بیرونی، ایمیل، تلفن، دانلود و رابطه‌های امنیتی — با کد کامل.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="4" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>لینک‌ها: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>برای پرتفولیو لینک داخلی، خارجی، mailto، tel، دانلود و target مناسب بساز.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>متن لینک باید بدون خواندن اطرافش هم قابل فهم باشد.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k4-card">
+  <nav aria-label="نمونهٔ منو"><ul>
+    <li><a href="#k4-links">مهارت‌ها</a></li>
+    <li><a href="#k4-links">پروژه‌ها</a></li>
+    <li><a href="#k4-links">تماس</a></li>
+  </ul></nav>
+  <div class="k4-links" id="k4-links">
+    <a href="#k4-links">داخلی: پرش در همین صفحه</a>
+    <a href="/cdn-cgi/l/email-protection#4a222f2626250a2f322b273a262f64292527">ایمیل به من</a>
+    <a href="tel:+981234567">تماس تلفنی</a>
+    <a href="/cv.pdf" download="sara-cv.pdf">دانلود رزومه</a>
+    <a class="ext" href="https://example.com" target="_blank" rel="noopener noreferrer">پروفایل بیرونی</a>
+  </div>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k4-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k4-card nav ul{list-style:none;display:flex;gap:.4rem;flex-wrap:wrap;margin:0 0 .8rem;padding:0}
+.k4-card nav a{
+  <i>display</i>:<u>inline-block;text-decoration:none;color:#315ed2;background:#e9efff</u>;
+  <i>border-radius</i>:<u>9px;padding:.25rem .6rem;font-size:.84rem</u>;
+}
+.k4-card nav a:hover{background:#315ed2;color:#fff}
+.k4-links{display:grid;gap:.4rem;font-size:.85rem}
+.k4-links a{color:#28478f;text-underline-offset:4px}
+.k4-links a[download]{color:#147955}
+.k4-links .ext::after{content:" ↗";color:#d95432}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k4-card"</u>&gt;
+  &lt;<b>nav</b> <i>aria-label</i>=<u>"ناوبری اصلی"</u>&gt;
+    &lt;<b>ul</b>&gt;
+      &lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"#projects"</u>&gt;پروژه‌ها&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;
+      &lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"#skills"</u>&gt;مهارت‌ها&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;
+      &lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"#contact"</u>&gt;تماس&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;
+    &lt;/<b>ul</b>&gt;
+  &lt;/<b>nav</b>&gt;
+
+  &lt;<b>div</b> <i>class</i>=<u>"k4-links"</u>&gt;
+    &lt;<b>a</b> <i>href</i>=<u>"#top"</u>&gt;داخلی: پرش در همین صفحه&lt;/<b>a</b>&gt;
+    &lt;<b>a</b> <i>href</i>=<u>"mailto:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9818c858586a98c91888499858cc78a8684">[email&#160;protected]</a>"</u>&gt;ایمیل به من&lt;/<b>a</b>&gt;
+    &lt;<b>a</b> <i>href</i>=<u>"tel:+981234567"</u>&gt;تماس تلفنی&lt;/<b>a</b>&gt;
+    &lt;<b>a</b> <i>href</i>=<u>"/cv.pdf"</u> <i>download</i>=<u>"sara-cv.pdf"</u>&gt;دانلود رزومه (PDF، ۲۴۰ کیلوبایت)&lt;/<b>a</b>&gt;
+    &lt;<b>a</b> <i>href</i>=<u>"https://example.com"</u> <i>target</i>=<u>"_blank"</u> <i>rel</i>=<u>"noopener noreferrer"</u>&gt;
+      پروفایل بیرونی
+    &lt;/<b>a</b>&gt;
+  &lt;/<b>div</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>target="_blank"</b> بدون <code>rel="noopener"</code> امنیت پنجرهٔ والد را به خطر می‌اندازد.</li><li><b>download</b> می‌تواند نام فایل ذخیره‌شده را تعیین کند؛ فقط برای منابع هم‌مبدأ مؤثر است.</li><li>لینک <code>mailto</code> و <code>tel</code> روی موبایل اپ مناسب را باز می‌کنند.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>rel روی لینک چه مقادیری دارد؟<small>امنیت و معنای رابطه</small></span></summary><div class="flash-body"><ul><li><code>noopener</code> دسترسی صفحهٔ مقصد به window.opener را می‌بندد.</li><li><code>noreferrer</code> اطلاعات ارجاع‌دهنده را هم نمی‌فرستد.</li><li><code>nofollow</code> به موتور جست‌وجو می‌گوید این لینک اعتبارسنجی/تبلیغاتی است.</li><li><code>noopener noreferrer</code> را با هم بنویس؛ مرورگرهای قدیمی فقط noreferrer را می‌فهمند.</li></ul></div></details>
+<details class="flash"><summary><span>لینک پرشی داخلی چطور کار می‌کند؟<small>Fragment identifier</small></span></summary><div class="flash-body"><ul><li><code>href="#projects"</code> به عنصری با <code>id="projects"</code> می‌رود.</li><li>id باید در کل سند یکتا باشد؛ تکرار id رفتار مرورگر را خراب می‌کند.</li><li>برای پرش به نقطهٔ اسکرول دلخواه، همان id را روی heading بگذار.</li><li>برای کنترل دقیق موقعیت، <code>scroll-margin-top</code> در CSS چسبیدن زیر هدر را حل می‌کند.</li></ul></div></details>
+<details class="flash"><summary><span>متن لینک چطور باید باشد؟<small>دسترس‌پذیری و سئو</small></span></summary><div class="flash-body"><ul><li>متن لینک باید بدون جمله‌های اطراف هم معنی بدهد: «دانلود رزومهٔ سارا (PDF)».</li><li>«اینجا کلیک کنید» و «بیشتر» هیچ اطلاعاتی به صفحه‌خوان نمی‌دهد.</li><li>برای لینک دانلود، نوع و حجم فایل را بگو.</li><li>لینک را با رنگ و زیرخط قابل تشخیص نگه دار، نه فقط رنگ (کوررنگی).</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l5">
+<div class="lesson-head"><span class="num">۵</span><div><h3>تصویر: img، srcset، picture، figure و عکس واکنش‌گرا</h3><p>تصویر با ابعاد مشخص، نسخهٔ responsive، alt درست و figcaption.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="5" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>تصویر: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>یک تصویر قهرمان با width/height، alt و srcset بساز و برای دو برش هنری از picture استفاده کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>در موبایل و دسکتاپ تصویر را بدون پرش چیدمان نمایش بده.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k5-card">
+  <span class="k5-avatar" role="img" aria-label="پرترهٔ نمونه"></span>
+  <p style="margin:.2rem 0;font-size:.86rem">تصویر پروفایل با ابعاد ثابت تا چیدمان نپرد.</p>
+  <figure class="k5-figure" style="clear:both;margin-top:.8rem">
+    <picture><img alt="نمای انتزاعی داشبورد فروش" style="height:130px"></picture>
+    <figcaption>نمونه‌کار داشبورد فروش — تصویر با aspect-ratio مشخص و object-fit: cover.</figcaption>
+  </figure>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k5-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k5-figure{margin:0}
+.k5-figure picture{display:block;border-radius:12px;overflow:hidden}
+.k5-figure img{
+  <i>display</i>:<u>block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover</u>;
+  <i>background</i>:<u>linear-gradient(135deg,#263b61,#5178b1)</u>;
+}
+.k5-figure figcaption{
+  <i>color</i>:<u>#637089;font-size:.82rem;margin-top:.45rem;border-right:3px solid #315ed2</u>;
+  <i>padding-right</i>:<u>.5rem</u>;
+}
+.k5-avatar{
+  <i>width</i>:<u>64px;height:64px;border-radius:50%;object-fit:cover</u>;
+  <i>background</i>:<u>linear-gradient(135deg,#d95432,#f0c64b);float:left;margin-inline-end:.7rem</u>;
+}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k5-card"</u>&gt;
+  &lt;<b>img</b> <i>class</i>=<u>"k5-avatar"</u>
+       <i>src</i>=<u>"avatar.webp"</u> <i>width</i>=<u>"64"</u> <i>height</i>=<u>"64"</u>
+       <i>alt</i>=<u>"پرترهٔ سارا محمدی"</u>&gt;
+
+  &lt;<b>figure</b> <i>class</i>=<u>"k5-figure"</u>&gt;
+    &lt;<b>picture</b>&gt;
+      &lt;<b>source</b> <i>type</i>=<u>"image/avif"</u>
+              <i>srcset</i>=<u>"dashboard-400.avif 400w, dashboard-800.avif 800w"</u>
+              <i>sizes</i>=<u>"(max-width: 700px) 100vw, 400px"</u>&gt;
+      &lt;<b>source</b> <i>type</i>=<u>"image/webp"</u> <i>srcset</i>=<u>"dashboard-800.webp 800w"</u>&gt;
+      &lt;<b>img</b> <i>src</i>=<u>"dashboard-800.jpg"</u>
+           <i>width</i>=<u>"800"</u> <i>height</i>=<u>"450"</u>
+           <i>loading</i>=<u>"lazy"</u> <i>decoding</i>=<u>"async"</u>
+           <i>alt</i>=<u>"داشبورد فروش با نمودار فروش ماهانه و جدول سفارش‌ها"</u>&gt;
+    &lt;/<b>picture</b>&gt;
+    &lt;<b>figcaption</b>&gt;
+      نمونه‌کار داشبورد فروش — تصویر با aspect-ratio مشخص و object-fit: cover.
+    &lt;/<b>figcaption</b>&gt;
+  &lt;/<b>figure</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>width/height</b> واقعی روی img بگذار تا مرورگر جای تصویر را رزرو کند و صفحه نلرزد.</li><li><b>srcset</b> + <b>sizes</b> نسخهٔ مناسب دستگاه را انتخاب می‌کند؛ <b>picture</b> برای نوع فایل متفاوت است.</li><li><b>loading="lazy"</b> را برای تصاویر پایین صفحه بگذار، نه تصویر اصلی بالا.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>alt را دقیقاً چطور بنویسم؟<small>هدف تصویر را توصیف کن</small></span></summary><div class="flash-body"><ul><li>فرمول: «چه چیزی + چه کاری/چه اطلاعاتی».</li><li>تصویر تزئینی: <code>alt=""</code> (خالی، ولی وجود دارد) تا صفحه‌خوان از آن بگذرد.</li><li>اگر تصویر لینک است، alt باید مقصد را بگوید، نه شکل تصویر.</li><li>نام فایل را در alt کپی نکن: «IMG_2034.jpg» بی‌معناست.</li></ul></div></details>
+<details class="flash"><summary><span>چرا ابعاد تصویر را بنویسیم؟<small>جلوگیری از پرش چیدمان</small></span></summary><div class="flash-body"><ul><li>مرورگر قبل از بارگذاری تصویر نسبت ابعاد را می‌داند و جای خالی رزرو می‌کند.</li><li>این معیار CLS را در Core Web Vitals بهبود می‌دهد.</li><li>در CSS با <code>aspect-ratio</code> هم می‌توانی نسبت را تعیین کنی.</li><li>با <code>object-fit: cover</code> تصویر بدون کشیدگی پر می‌شود.</li></ul></div></details>
+<details class="flash"><summary><span>srcset و sizes چه تفاوتی دارند؟<small>انتخاب نسخه در مرورگر</small></span></summary><div class="flash-body"><ul><li><code>srcset</code> فهرست نسخه‌ها را با عرض واقعی (w) یا چگالی (x) می‌دهد.</li><li><code>sizes</code> به مرورگر می‌گوید هر نسخه چقدر از صفحه را می‌گیرد.</li><li>با <code>x</code> برای صفحه‌های Retina مثل <code><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b47444c446b1953055b454c">[email&#160;protected]</a> 2x</code> کار می‌کنی.</li><li>همیشه یک <code>src</code> پشتیبان داخل img بگذار.</li></ul></div></details>
+<details class="flash"><summary><span>figure و picture چیست؟<small>ظرف و سوییچ تصویر</small></span></summary><div class="flash-body"><ul><li><code>figure</code> ظرف مستقل تصویر/دیاگرام + <code>figcaption</code> است.</li><li><code>picture</code> برای انتخاب نوع فایل (AVIF/WebP/JPG) یا آرت‌دایرکشن است.</li><li>در picture هم img نهایی الزامی است؛ مرورگرهای ناسازگار آن را نمایش می‌دهند.</li><li>برای تصویر تزئینی صرف، figure لازم نیست.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l6">
+<div class="lesson-head"><span class="num">۶</span><div><h3>فرم‌ها: form، label، input و کنترل‌ها</h3><p>هر کنترل ورودی با برچسب، نوع، اعتبارسنجی و حالت‌های دسترس‌پذیر — همراه کد کامل.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="6" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>فرم: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>فرم تماس را با label، name، type، required، autocomplete، fieldset و پیام خطای قابل فهم طراحی کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>هم اعتبارسنجی مرورگر را تست کن و هم نقش سرور را توضیح بده.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k6-card">
+<form class="k6-form">
+  <fieldset><legend>اطلاعات تماس</legend>
+    <label for="k6-name">نام و نام خانوادگی</label>
+    <input id="k6-name" name="name" autocomplete="name" required>
+    <label for="k6-email" style="margin-top:.5rem">ایمیل</label>
+    <input id="k6-email" name="email" type="email" autocomplete="email" required>
+  </fieldset>
+  <div class="k6-row">
+    <label><input type="checkbox" checked> خبرنامه</label>
+    <label><input type="radio" name="k6-plan"> پروژه کوچک</label>
+    <label><input type="radio" name="k6-plan"> پروژه بزرگ</label>
+  </div>
+  <label for="k6-msg">پیام شما</label>
+  <textarea id="k6-msg" rows="3"></textarea>
+  <div class="k6-row">
+    <button type="submit">فرستادن پیام</button>
+    <button type="reset" class="k6-ghost">پاک‌کردن</button>
+  </div>
+</form>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k6-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k6-form{display:grid;gap:.65rem}
+.k6-form fieldset{
+  <i>border</i>:<u>1px solid #dbe3ef;border-radius:12px;padding:.7rem</u>;
+}
+.k6-form legend{font-weight:800;color:#315ed2;padding:0 .35rem;font-size:.85rem}
+.k6-form label{font-size:.82rem;font-weight:700;display:block;margin-bottom:.2rem}
+.k6-form input,.k6-form select,.k6-form textarea{
+  <i>width</i>:<u>100%;border:1px solid #cfd8e6;border-radius:9px;padding:.45rem</u>;
+  <i>font</i>:<u>inherit;background:#f7f9fd</u>;
+}
+.k6-form input:focus,.k6-form textarea:focus{
+  <i>outline</i>:<u>3px solid #f0c64b;outline-offset:2px;background:#fff</u>;
+}
+.k6-form input:user-invalid{border-color:#d95432}
+.k6-form .k6-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.k6-form .k6-row label{font-weight:600;margin:0;font-size:.82rem}
+.k6-form button{
+  <i>border</i>:<u>0;background:#d95432;color:#fff;font-weight:800;border-radius:10px</u>;
+  <i>padding</i>:<u>.55rem .9rem;font-size:.85rem</u>;
+}
+.k6-form button:hover{background:#b8421f}
+.k6-form button.k6-ghost{background:#e9efff;color:#315ed2}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k6-card"</u>&gt;
+  &lt;<b>form</b> <i>class</i>=<u>"k6-form"</u> <i>action</i>=<u>"/contact"</u> <i>method</i>=<u>"post"</u> novalidate&gt;
+
+    &lt;<b>fieldset</b>&gt;
+      &lt;<b>legend</b>&gt;اطلاعات تماس&lt;/<b>legend</b>&gt;
+
+      &lt;<b>label</b> <i>for</i>=<u>"k6-name"</u>&gt;نام و نام خانوادگی&lt;/<b>label</b>&gt;
+      &lt;<b>input</b> <i>id</i>=<u>"k6-name"</u> <i>name</i>=<u>"name"</u> <i>type</i>=<u>"text"</u>
+             <i>autocomplete</i>=<u>"name"</u> required
+             <i>placeholder</i>=<u>"مثلاً نازنین احمدی"</u>&gt;
+
+      &lt;<b>label</b> <i>for</i>=<u>"k6-email"</u>&gt;ایمیل&lt;/<b>label</b>&gt;
+      &lt;<b>input</b> <i>id</i>=<u>"k6-email"</u> <i>name</i>=<u>"email"</u> <i>type</i>=<u>"email"</u>
+             <i>autocomplete</i>=<u>"email"</u> required&gt;
+
+      &lt;<b>label</b> <i>for</i>=<u>"k6-tel"</u>&gt;تلفن (اختیاری)&lt;/<b>label</b>&gt;
+      &lt;<b>input</b> <i>id</i>=<u>"k6-tel"</u> <i>name</i>=<u>"tel"</u> <i>type</i>=<u>"tel"</u>
+             <i>inputmode</i>=<u>"tel"</u> <i>pattern</i>=<u>"[0-9]{11}"</u>&gt;
+    &lt;/<b>fieldset</b>&gt;
+
+    &lt;<b>label</b> <i>for</i>=<u>"k6-topic"</u>&gt;موضوع&lt;/<b>label</b>&gt;
+    &lt;<b>select</b> <i>id</i>=<u>"k6-topic"</u> <i>name</i>=<u>"topic"</u>&gt;
+      &lt;<b>option</b> <i>value</i>=<u>"project"</u>&gt;پروژهٔ جدید&lt;/<b>option</b>&gt;
+      &lt;<b>option</b> <i>value</i>=<u>"job"</u>&gt;همکاری&lt;/<b>option</b>&gt;
+      &lt;<b>option</b> <i>value</i>=<u>"other"</u>&gt;موضوع دیگر&lt;/<b>option</b>&gt;
+    &lt;/<b>select</b>&gt;
+
+    &lt;<b>label</b>&gt;
+      &lt;<b>input</b> <i>type</i>=<u>"checkbox"</u> <i>name</i>=<u>"newsletter"</u> checked&gt;
+      عضویت در خبرنامه
+    &lt;/<b>label</b>&gt;
+
+    &lt;<b>label</b>&gt;&lt;<b>input</b> <i>type</i>=<u>"radio"</u> <i>name</i>=<u>"size"</u> <i>value</i>=<u>"small"</u>&gt; پروژهٔ کوچک&lt;/<b>label</b>&gt;
+    &lt;<b>label</b>&gt;&lt;<b>input</b> <i>type</i>=<u>"radio"</u> <i>name</i>=<u>"size"</u> <i>value</i>=<u>"large"</u>&gt; پروژهٔ بزرگ&lt;/<b>label</b>&gt;
+
+    &lt;<b>label</b> <i>for</i>=<u>"k6-msg"</u>&gt;پیام شما&lt;/<b>label</b>&gt;
+    &lt;<b>textarea</b> <i>id</i>=<u>"k6-msg"</u> <i>name</i>=<u>"message"</u> <i>rows</i>=<u>"3"</u> required&gt;&lt;/<b>textarea</b>&gt;
+
+    &lt;<b>button</b> <i>type</i>=<u>"submit"</u>&gt;فرستادن پیام&lt;/<b>button</b>&gt;
+    &lt;<b>button</b> <i>type</i>=<u>"reset"</u> <i>class</i>=<u>"k6-ghost"</u>&gt;پاک‌کردن&lt;/<b>button</b>&gt;
+  &lt;/<b>form</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>novalidate</b> اعتبارسنجی بومی مرورگر را خاموش می‌کند؛ فقط وقتی می‌گذاری که خودت با JS اعتبارسنجی می‌کنی.</li><li><b>autocomplete</b> پرکردن خودکار درست را فعال می‌کند؛ نام و ایمیل را استاندارد بنویس.</li><li><b>inputmode</b> کیبورد موبایل را کنترل می‌کند، ولی نوع داده را اعتبارسنجی نمی‌کند.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>همهٔ مقادیر type=input<small>از text تا color</small></span></summary><div class="flash-body"><ul><li><code>text, email, tel, url, number, password</code> برای متن و عدد.</li><li><code>date, time, datetime-local, month, week</code> برای زمان و تاریخ.</li><li><code>checkbox, radio, range, color, file, hidden, search, submit, reset, button, image</code>.</li><li><code>number</code> با <code>min/max/step</code> محدود می‌شود.</li></ul></div></details>
+<details class="flash"><summary><span>label را چطور وصل کنم؟<small>دو راه درست</small></span></summary><div class="flash-body"><ul><li>راه اول: <code>&lt;label for="email"&gt;</code> + <code>&lt;input id="email"&gt;</code>.</li><li>راه دوم: input را داخل خود label بگذار (بدون for).</li><li>placeholder جای label نیست؛ با تایپ محو می‌شود و کنتراست ضعیفی دارد.</li><li>برای گروه رادیو/چک‌باکس، fieldset + legend زمینهٔ گروه را می‌سازد.</li></ul></div></details>
+<details class="flash"><summary><span>اعتبارسنجی سمت مرورگر چه چیزهایی دارد؟<small>required / pattern / min / max / step</small></span></summary><div class="flash-body"><ul><li><code>required</code> خالی‌بودن را می‌گیرد.</li><li><code>pattern</code> الگوی regex را بررسی می‌کند، مثل کد ملی یا شمارهٔ تلفن.</li><li><code>minlength/maxlength</code> طول متن و <code>min/max</code> مقدار عددی را کنترل می‌کند.</li><li>اعتبارسنجی HTML جایگزین اعتبارسنجی سرور نیست؛ حتماً سمت بک‌اند هم بررسی کن.</li></ul></div></details>
+<details class="flash"><summary><span>چطور خطای فرم را دسترس‌پذیر کنم؟<small>aria-invalid و aria-describedby</small></span></summary><div class="flash-body"><ul><li><code>aria-invalid="true"</code> را روی فیلد خطادار بگذار.</li><li>پیام خطا را در عنصری با id بگذار و با <code>aria-describedby</code> به فیلد وصل کن.</li><li>خطا را با متن بگو، نه فقط رنگ قرمز.</li><li>بعد از ارسال، تمرکز را به فیلد خطادار یا خلاصهٔ خطاها ببر.</li></ul></div></details>
+<details class="flash"><summary><span>فیلدهای تخصصی<small>button، datalist، output، progress</small></span></summary><div class="flash-body"><ul><li><code>type="button"</code> برای دکمه‌ای که فرم را ارسال نمی‌کند.</li><li><code>datalist</code> فهرست پیشنهادی به input می‌دهد، بدون اجبار انتخاب.</li><li><code>output</code> نتیجهٔ محاسبه را نشان می‌دهد و <code>progress</code> پیشرفت را.</li><li><code>type="file"</code> با <code>accept</code> و <code>multiple</code> محدود و چندگانه می‌شود.</li></ul></div></details>
+<details class="flash"><summary><span>امنیت فرم<small>شماره‌های پشتی</small></span></summary><div class="flash-body"><ul><li>روش <code>POST</code> برای دادهٔ حساس؛ GET داده را در URL لو می‌دهد.</li><li><code>autocomplete="off"</code> روی فیلدهای حساس مثل کد یک‌بارمصرف.</li><li>توکن CSRF و محدودیت نرخ درخواست کار سرور است، نه HTML.</li><li><code>enctype="multipart/form-data"</code> برای فرم همراه با فایل الزامی است.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l7">
+<div class="lesson-head"><span class="num">۷</span><div><h3>مولتی‌مدیا: audio، video، source، track، iframe، embed، picture</h3><p>هر رسانه با کنترل، زیرنویس، متن جایگزین و بارگذاری درست — کد کامل.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="7" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>رسانه: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>یک ویدیو با دو source، poster، track و fallback بساز و یک iframe با title و loading اضافه کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>autoplay را فقط با دلیل روشن و بدون صدای ناخواسته استفاده کن.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k7-card">
+  <div class="k7-player">
+    <div class="k7-stage" role="img" aria-label="پیش‌نمایش ویدیوی معرفی">▶</div>
+    <div class="k7-controls">
+      <button type="button" aria-label="پخش">▶</button>
+      <div class="k7-bar"><i></i></div>
+      <span>۰۰:۳۸</span><span class="k7-cc">CC فارسی</span>
+    </div>
+  </div>
+  <div class="k7-ratio">۴:۳ یا ۱۶:۹ با aspect-ratio → بدون پرش چیدمان</div>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k7-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k7-player{
+  <i>background</i>:<u>#111a2b;color:#e2ebfa;border-radius:12px;padding:.7rem</u>;
+  <i>display</i>:<u>grid;gap:.6rem</u>;
+}
+.k7-stage{
+  <i>aspect-ratio</i>:<u>16/9;border-radius:9px;display:grid;place-items:center</u>;
+  <i>background</i>:<u>linear-gradient(135deg,#23406a,#5a83c4);font-size:1.6rem;color:#fff</u>;
+}
+.k7-controls{display:flex;align-items:center;gap:.5rem;font-size:.76rem}
+.k7-controls button{
+  <i>width</i>:<u>32px;height:32px;border-radius:50%;border:0;background:#d95432;color:#fff</u>;
+}
+.k7-bar{flex:1;height:7px;border-radius:99px;background:#2a3b5a;overflow:hidden}
+.k7-bar i{display:block;width:38%;height:100%;background:#f0c64b}
+.k7-cc{color:#8bd1ae}
+.k7-ratio{
+  <i>border</i>:<u>1px solid #dbe3ef;border-radius:10px;aspect-ratio:16/9;display:grid</u>;
+  <i>place-items</i>:<u>center;color:#637089;background:#f7f9fd;font-size:.82rem;margin-top:.7rem</u>;
+}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k7-card"</u>&gt;
+
+  &lt;<b>video</b> <i>class</i>=<u>"k7-player"</u> controls <i>preload</i>=<u>"metadata"</u>
+         <i>poster</i>=<u>"cover.webp"</u> <i>width</i>=<u>"640"</u> <i>height</i>=<u>"360"</u>&gt;
+    &lt;<b>source</b> <i>src</i>=<u>"intro.webm"</u> <i>type</i>=<u>"video/webm"</u>&gt;
+    &lt;<b>source</b> <i>src</i>=<u>"intro.mp4"</u>  <i>type</i>=<u>"video/mp4"</u>&gt;
+    &lt;<b>track</b> <i>kind</i>=<u>"captions"</u> <i>src</i>=<u>"fa.vtt"</u> <i>srclang</i>=<u>"fa"</u> <i>label</i>=<u>"فارسی"</u> default&gt;
+    &lt;<b>track</b> <i>kind</i>=<u>"subtitles"</u> <i>src</i>=<u>"en.vtt"</u> <i>srclang</i>=<u>"en"</u> <i>label</i>=<u>"English"</u>&gt;
+    &lt;<b>p</b>&gt;مرورگر شما ویدیو را پشتیبانی نمی‌کند. &lt;<b>a</b> <i>href</i>=<u>"intro.mp4"</u>&gt;دانلود ویدیو&lt;/<b>a</b>&gt;.&lt;/<b>p</b>&gt;
+  &lt;/<b>video</b>&gt;
+
+  &lt;<b>audio</b> controls <i>preload</i>=<u>"none"</u>&gt;
+    &lt;<b>source</b> <i>src</i>=<u>"intro.ogg"</u> <i>type</i>=<u>"audio/ogg"</u>&gt;
+    &lt;<b>source</b> <i>src</i>=<u>"intro.mp3"</u> <i>type</i>=<u>"audio/mpeg"</u>&gt;
+    &lt;<b>p</b>&gt;مرورگر شما صوت را پشتیبانی نمی‌کند.&lt;/<b>p</b>&gt;
+  &lt;/<b>audio</b>&gt;
+
+  &lt;<b>div</b> <i>class</i>=<u>"k7-ratio"</u>&gt;
+    &lt;<b>iframe</b> <i>src</i>=<u>"https://example.com/embed"</u>
+            <i>title</i>=<u>"نمونه‌کار تعاملی"</u> <i>width</i>=<u>"100%"</u> <i>height</i>=<u>"100%"</u>
+            <i>loading</i>=<u>"lazy"</u> allowfullscreen&gt;&lt;/<b>iframe</b>&gt;
+  &lt;/<b>div</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li>همیشه <b>poster</b> و <b>controls</b> بگذار؛ پخش خودکار (<code>autoplay</code>) آزارنده و غیردسترس‌پذیر است.</li><li><b>track</b> با kind مناسب زیرنویس/توضیح می‌آورد؛ برای صوت متن جایگزین متنی فراهم کن.</li><li>هر <b>iframe</b> باید <code>title</code> داشته باشد؛ بدون آن صفحه‌خوان نمی‌داند چه چیزی بار شده.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>چند نوع track داریم؟<small>captions, subtitles, descriptions</small></span></summary><div class="flash-body"><ul><li><code>captions</code> برای ناشنوا و نیمه‌شنوا (شامل صداهای محیطی).</li><li><code>subtitles</code> ترجمهٔ گفتار است.</li><li><code>descriptions</code> برای کاربر نابینا توصیف صحنه است و <code>chapters</code> فصل‌بندی می‌کند.</li><li>فایل VTT را با <code>WEBVTT</code> شروع کن و زمان‌ها را <code>00:00:01.000 --&gt; 00:00:03.000</code> بنویس.</li></ul></div></details>
+<details class="flash"><summary><span>autoplay چه مشکلی دارد؟<small>کاربر و داده</small></span></summary><div class="flash-body"><ul><li>پخش خودکار صدا کاربر را غافلگیر می‌کند و در مرورگرها مسدود می‌شود.</li><li>اگر مجبوری، <code>autoplay muted</code> بگذار و کنترل صدا را به کاربر بده.</li><li>برای صرفه‌جویی داده، <code>preload="none"</code> یا <code>metadata</code> انتخاب کن.</li><li>ویدیوی پس‌زمینه را با <code>loop muted playsinline</code> و بدون صدا نگه دار.</li></ul></div></details>
+<details class="flash"><summary><span>iframe، embed و object چه فرقی دارند؟<small>محتوای جاسازی‌شده</small></span></summary><div class="flash-body"><ul><li><code>iframe</code> یک سند کامل داخل صفحه است؛ برای نقشه، ویدیو و ویجت.</li><li><code>embed</code> و <code>object</code> قدیمی‌ترند و برای پلاگین‌ها بودند؛ امروز کمتر لازم می‌شوند.</li><li>برای iframe از <code>sandbox</code>، <code>allow</code> و <code>loading="lazy"</code> استفاده کن.</li><li>دسترس‌پذیری iframe به <code>title</code> و محتوای خودش وابسته است.</li></ul></div></details>
+<details class="flash"><summary><span>svg و canvas کجا؟<small>گرافیک درون‌خطی در برابر رستر</small></span></summary><div class="flash-body"><ul><li><code>svg</code> برای آیکون و شکل مقیاس‌پذیر؛ در HTML قابل استایل و قابل خواندن برای صفحه‌خوان است.</li><li><code>canvas</code> برای رسم پویا با JavaScript و بازی/نمودار پیچیده.</li><li>برای نمودار ثابت SVG بهتر است؛ چون متن و شکل قابل جست‌وجو می‌ماند.</li><li>در canvas، محتوای گرافیکی را با متن جایگزین یا <code>role="img"</code> و <code>aria-label</code> توصیف کن.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l8">
+<div class="lesson-head"><span class="num">۸</span><div><h3>ساختار معنایی: header، nav، main، section، article، aside، footer</h3><p>نقشهٔ کامل نقاط عطف صفحه و اینکه چه چیزی داخل هر کدام می‌رود.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="8" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>ساختار: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>نقشهٔ یک صفحهٔ پرتفولیو را با header، nav، main، section، article، aside و footer روی کاغذ رسم و سپس پیاده کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>برای هر landmark دلیل معنایی داشته باش.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k8-page">
+  <div class="k8-head">&lt;header&gt; — logo + nav + search</div>
+  <div class="k8-main">&lt;main&gt;
+    <div class="k8-sub">&lt;section id="home"&gt; — معرفی</div>
+    <div class="k8-sub">&lt;article&gt; — کارت پروژه (مستقل)</div>
+    <div class="k8-sub">&lt;aside&gt; — شبکه‌های اجتماعی کنار</div>
+    <div class="k8-sub">&lt;figure&gt; + &lt;figcaption&gt;</div>
+  </div>
+  <div class="k8-foot">&lt;footer&gt; — اطلاعات پایانی</div>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k8-page{
+  <i>background</i>:<u>#fff;border:1px solid #dbe3ef;border-radius:14px;overflow:hidden</u>;
+  <i>font-size</i>:<u>.8rem;display:grid;gap:.35rem;padding:.7rem</u>;
+}
+.k8-page&gt;div{border:1px dashed #cfd8e6;border-radius:9px;padding:.4rem .6rem;color:#637089}
+.k8-head{border-color:#315ed2!important;color:#315ed2!important;background:#e9efff}
+.k8-main{border-color:#147955!important;color:#147955!important;background:#e3f7ee}
+.k8-aside{border-style:double!important;border-color:#d95432!important;color:#d95432!important;background:#fff0eb}
+.k8-foot{border-color:#5c4b9b!important;color:#5c4b9b!important;background:#f1ecff}
+.k8-sub{background:#fff;border:1px solid #e6ecf6;border-radius:7px;padding:.3rem .5rem;margin-top:.3rem;font-size:.76rem}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>body</b>&gt;
+  &lt;<b>a</b> <i>class</i>=<u>"skip-link"</u> <i>href</i>=<u>"#main"</u>&gt;پرش به محتوای اصلی&lt;/<b>a</b>&gt;
+
+  &lt;<b>header</b> <i>class</i>=<u>"site-header"</u>&gt;
+    &lt;<b>h1</b> <i>class</i>=<u>"brand"</u>&gt;سارا محمدی&lt;/<b>h1</b>&gt;
+    &lt;<b>nav</b> <i>aria-label</i>=<u>"ناوبری اصلی"</u>&gt;
+      &lt;<b>ul</b>&gt;&lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"#projects"</u>&gt;پروژه‌ها&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;&lt;/<b>ul</b>&gt;
+    &lt;/<b>nav</b>&gt;
+  &lt;/<b>header</b>&gt;
+
+  &lt;<b>main</b> <i>id</i>=<u>"main"</u>&gt;
+    &lt;<b>section</b> <i>id</i>=<u>"home"</u> <i>aria-labelledby</i>=<u>"home-title"</u>&gt;
+      &lt;<b>h2</b> <i>id</i>=<u>"home-title"</u>&gt;خانه&lt;/<b>h2</b>&gt;
+
+      &lt;<b>article</b> <i>class</i>=<u>"project-card"</u>&gt;
+        &lt;<b>header</b>&gt;
+          &lt;<b>h3</b>&gt;داشبورد فروش&lt;/<b>h3</b>&gt;
+          &lt;<b>p</b>&gt;ثبت‌شده در &lt;<b>time</b> <i>datetime</i>=<u>"2024-04-01"</u>&gt;فروردین ۱۴۰۳&lt;/<b>time</b>&gt;&lt;/<b>p</b>&gt;
+        &lt;/<b>header</b>&gt;
+        &lt;<b>p</b>&gt;جدول، فیلتر و گزارش‌های واکنش‌گرا.&lt;/<b>p</b>&gt;
+        &lt;<b>figure</b>&gt;
+          &lt;<b>img</b> <i>src</i>=<u>"dashboard.webp"</u> <i>alt</i>=<u>"نمای داشبورد فروش"</u> <i>width</i>=<u>"640"</u> <i>height</i>=<u>"360"</u>&gt;
+          &lt;<b>figcaption</b>&gt;نمای کلی داشبورد&lt;/<b>figcaption</b>&gt;
+        &lt;/<b>figure</b>&gt;
+        &lt;<b>footer</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"project.html"</u>&gt;جزئیات پروژه&lt;/<b>a</b>&gt;&lt;/<b>footer</b>&gt;
+      &lt;/<b>article</b>&gt;
+
+      &lt;<b>aside</b> <i>aria-label</i>=<u>"شبکه‌های اجتماعی"</u>&gt;
+        &lt;<b>p</b>&gt;مرا دنبال کنید:&lt;/<b>p</b>&gt;
+        &lt;<b>ul</b>&gt;&lt;<b>li</b>&gt;&lt;<b>a</b> <i>href</i>=<u>"https://github.com/"</u>&gt;GitHub&lt;/<b>a</b>&gt;&lt;/<b>li</b>&gt;&lt;/<b>ul</b>&gt;
+      &lt;/<b>aside</b>&gt;
+    &lt;/<b>section</b>&gt;
+  &lt;/<b>main</b>&gt;
+
+  &lt;<b>footer</b> <i>class</i>=<u>"site-footer"</u>&gt;
+    &lt;<b>small</b>&gt;© ۱۴۰۳ سارا محمدی&lt;/<b>small</b>&gt;
+  &lt;/<b>footer</b>&gt;
+&lt;/<b>body</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>main</b> باید یکتا باشد و بیرون از header/footer قرار بگیرد.</li><li><b>article</b> می‌تواند خودش header و footer داشته باشد؛ این نقاط عطف محلی‌اند.</li><li><b>aside</b> برای محتوای مرتبط ولی غیرضروری است (نوار کناری، تبلیغ، شبکه‌های اجتماعی).</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>چه زمانی header داخل article درست است؟<small>نقاط عطف محلی</small></span></summary><div class="flash-body"><ul><li>اگر کارت مقاله‌ای تیتر و متادیتای خودش را دارد، header آن را گروه‌بندی کن.</li><li>header داخل article به نقش banner نقشه‌نگاری نمی‌شود؛ یک بخش معنایی است.</li><li>footer کارت معمولاً لینک متادیتا یا فهرست برچسب‌ها را نگه می‌دارد.</li><li>این کار باعث می‌شود ساختار کارت مستقل و قابل بازنشر باشد.</li></ul></div></details>
+<details class="flash"><summary><span>dig را از کجا بشناسم؟<small>دسته‌بندی معنایی جدید</small></span></summary><div class="flash-body"><ul><li><code>div</code> بدون معنا؛ اگر فقط برای چیدمان است، همان div کافی است.</li><li><code>section</code> موضوعی با تیتر؛ <code>article</code> مستقل و قابل بازنشر.</li><li><code>aside</code> مرتبط ولی غیراصلی؛ <code>nav</code> مجموعهٔ لینک ناوبری.</li><li>اگر می‌توانی برای بلوک تیتر بنویسی ولی معنی «بخش» ندارد، احتمالاً div یا article است.</li></ul></div></details>
+<details class="flash"><summary><span>details و summary چه کار می‌کنند؟<small>آکاردئون بومی، بدون JS</small></span></summary><div class="flash-body"><ul><li><code>details</code> بلوک بازشو و <code>summary</code> تیتر کلیک‌شدنی است.</li><li>با ویژگی <code>open</code> می‌توانی آن را از ابتدا باز نشان دهی.</li><li>مرورگر این رفتار را بدون JS و با کیبورد و صفحه‌خوان پشتیبانی می‌کند.</li><li>برای مودال، <code>dialog</code> با <code>showModal()</code> جای بهتری از div پنهان است.</li></ul></div></details>
+<details class="flash"><summary><span>figcaption و address و hgroup<small>ریزنکات معنایی</small></span></summary><div class="flash-body"><ul><li><code>figcaption</code> فقط داخل figure معنا دارد.</li><li><code>address</code> اطلاعات تماس نزدیک‌ترین والد (بدنه یا article) را می‌دهد.</li><li><code>hgroup</code> تیتر و زیرتیتر را یکجا گروه می‌کند.</li><li>خط‌های جداکنندهٔ معنایی مثل <code>&lt;hr&gt;</code> تغییری در ساختار نمی‌دهند، فقط گروه را جدا می‌کنند.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l9">
+<div class="lesson-head"><span class="num">۹</span><div><h3>عناصر تعاملی و پویای بومی</h3><p>details، dialog، popover، button، output، meter و progress بدون شبیه‌سازی با div.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="9" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>تعامل بومی: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>یک FAQ با details، یک dialog و یک popover بساز و تفاوتشان را توضیح بده.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>اول قابلیت native را امتحان کن، بعد سراغ JavaScript برو.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k9-card">
+  <details open><summary>جزئیات پروژه</summary><p style="font-size:.82rem;color:#637089">این متن با details و summary باز و بسته می‌شود.</p></details>
+  <p style="font-size:.82rem">پیشرفت دوره: <progress value="72" max="100">۷۲٪</progress></p>
+  <p style="font-size:.82rem">سطح HTML: <meter min="0" max="100" value="90">۹۰ از ۱۰۰</meter></p>
+  <p style="font-size:.82rem">خروجی: <output>۱۲ پروژه</output></p>
+  <div class="k9-pop">این یک ناحیهٔ popover آموزشی است؛ برای توضیح کوتاه، نه جایگزین فرم.</div>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k9-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k9-card details{border:1px solid #cfd8e6;border-radius:10px;padding:.5rem .7rem}
+.k9-card summary{cursor:pointer;font-weight:800;color:#315ed2}
+.k9-card dialog{border:0;border-radius:14px;box-shadow:0 16px 60px #17233b55;padding:1rem}
+.k9-card meter,.k9-card progress{width:100%;height:1rem;accent-color:#147955}
+.k9-card output{display:inline-block;background:#e3f7ee;color:#147955;border-radius:8px;padding:.2rem .5rem}
+.k9-pop{margin-top:.7rem;padding:.5rem;background:#fff0eb;border-radius:9px;color:#d95432}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k9-card"</u>&gt;
+  &lt;<b>details</b> open&gt;
+    &lt;<b>summary</b>&gt;جزئیات پروژه&lt;/<b>summary</b>&gt;
+    &lt;<b>p</b>&gt;این متن با details و summary باز و بسته می‌شود.&lt;/<b>p</b>&gt;
+  &lt;/<b>details</b>&gt;
+
+  &lt;<b>label</b> <i>for</i>=<u>"course-progress"</u>&gt;پیشرفت دوره&lt;/<b>label</b>&gt;
+  &lt;<b>progress</b> <i>id</i>=<u>"course-progress"</u> <i>value</i>=<u>"72"</u> <i>max</i>=<u>"100"</u>&gt;۷۲٪&lt;/<b>progress</b>&gt;
+
+  &lt;<b>label</b> <i>for</i>=<u>"html-meter"</u>&gt;سطح HTML&lt;/<b>label</b>&gt;
+  &lt;<b>meter</b> <i>id</i>=<u>"html-meter"</u> <i>min</i>=<u>"0"</u> <i>max</i>=<u>"100"</u> <i>low</i>=<u>"40"</u> <i>high</i>=<u>"80"</u> <i>optimum</i>=<u>"100"</u> <i>value</i>=<u>"90"</u>&gt;
+    ۹۰ از ۱۰۰
+  &lt;/<b>meter</b>&gt;
+
+  &lt;<b>p</b>&gt;خروجی: &lt;<b>output</b> <i>name</i>=<u>"total"</u> <i>for</i>=<u>"project-count"</u>&gt;۱۲ پروژه&lt;/<b>output</b>&gt;&lt;/<b>p</b>&gt;
+
+  &lt;<b>button</b> <i>type</i>=<u>"button"</u> <i>popovertarget</i>=<u>"tip-popover"</u>&gt;راهنما&lt;/<b>button</b>&gt;
+  &lt;<b>div</b> <i>id</i>=<u>"tip-popover"</u> popover <i>class</i>=<u>"k9-pop"</u>&gt;
+    popover بدون ساختن سیستم مودال دستی باز و بسته می‌شود.
+  &lt;/<b>div</b>&gt;
+
+  &lt;<b>dialog</b> <i>id</i>=<u>"contact-dialog"</u>&gt;
+    &lt;<b>form</b> <i>method</i>=<u>"dialog"</u>&gt;
+      &lt;<b>p</b>&gt;این یک dialog بومی است.&lt;/<b>p</b>&gt;
+      &lt;<b>button</b> <i>value</i>=<u>"cancel"</u>&gt;بستن&lt;/<b>button</b>&gt;
+    &lt;/<b>form</b>&gt;
+  &lt;/<b>dialog</b>&gt;
+  &lt;<b>button</b> <i>type</i>=<u>"button"</u> <i>onclick</i>=<u>"document.querySelector('#contact-dialog').showModal()"</u>&gt;
+    بازکردن dialog
+  &lt;/<b>button</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>details/summary</b> برای disclosure است؛ برای باز و بسته‌شدن ساده به JavaScript نیاز ندارد.</li><li><b>dialog</b> جعبهٔ گفت‌وگوی بومی است؛ <code>showModal()</code> آن را modal می‌کند و focus را مدیریت می‌کند.</li><li><b>progress</b> پیشرفت یک کار را نشان می‌دهد؛ <b>meter</b> اندازه‌گیری در یک بازه است، نه پیشرفت task.</li><li><b>popover</b> ویژگی/رفتار بومی جدید برای نمایش محتوای موقت است؛ پشتیبانی مرورگر را بررسی کن.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>details را جای آکاردئون JS بنویس؟<small>برای disclosure ساده بله</small></span></summary><div class="flash-body"><ul><li>summary اولین فرزند details و عنوان کنترل است.</li><li>ویژگی open وضعیت باز را کنترل می‌کند.</li><li>محتوای summary باید کوتاه و قابل کلیک باشد.</li><li>اگر چند پنل باید همزمان فقط یکی باز باشد، name در نسخه‌های پشتیبانی‌شدهٔ جدید و رفتار دقیق مرورگر را بررسی کن.</li></ul></div></details>
+<details class="flash"><summary><span>dialog با alert چه فرقی دارد؟<small>جعبهٔ گفت‌وگوی واقعی</small></span></summary><div class="flash-body"><ul><li>dialog برای تعامل کاربر است؛ با form method="dialog" دکمه می‌تواند dialog را ببندد.</li><li>showModal() لایهٔ modal و inertشدن پشت‌زمینه را فراهم می‌کند.</li><li>برای پیام سادهٔ غیرتعاملی از متن صفحه یا status استفاده کن.</li><li>هر dialog باید عنوان/متن قابل فهم و دکمهٔ بستن داشته باشد.</li></ul></div></details>
+<details class="flash"><summary><span>meter یا progress؟<small>درصد را اشتباه معنا نکن</small></span></summary><div class="flash-body"><ul><li>progress یعنی «کار چقدر انجام شده»، مثل بارگذاری ۷۲٪.</li><li>meter یعنی «مقدار در یک محدوده» مثل امتیاز یا سطح باتری.</li><li>برای هر دو مقدار متن fallback داخل تگ هم بنویس.</li><li>از meter برای مهارت می‌توانی استفاده کنی، ولی درصد ادعایی را با متن توضیحی همراه کن.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l10">
+<div class="lesson-head"><span class="num">۱۰</span><div><h3>اسکریپت، template، slot و دادهٔ ماشین‌خوان</h3><p>عنصرهای script، noscript، template، slot، data، time و microdata در جای درست.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="10" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>داده و component: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>یک کارت پروژه را با template آماده کن و تاریخ/قیمت را با time و data ماشین‌خوان کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>slot را فقط در سناریوی Web Component و Shadow DOM به‌کار ببر.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k10-card">
+  <p>قیمت: <data value="1500000">۱٬۵۰۰٬۰۰۰ تومان</data></p>
+  <p>انتشار: <time datetime="2024-04-01">فروردین ۱۴۰۳</time></p>
+  <p><abbr title="HyperText Markup Language">HTML</abbr> برای ساختار صفحه است.</p>
+  <div class="k10-code">&lt;template&gt; — الگوی پنهان برای ساخت clone با JavaScript</div>
+  <noscript>برای اجرای تعاملات این صفحه، JavaScript را فعال کنید.</noscript>
+</div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k10-card{background:#fff;border:1px solid #dbe3ef;border-radius:14px;padding:1rem}
+.k10-code{background:#111a2b;color:#e2ebfa;border-radius:10px;padding:.7rem;font:12px/1.8 monospace;direction:ltr;white-space:pre-wrap}
+.k10-card data{color:#147955;text-decoration:underline dotted}
+.k10-card time{color:#315ed2;font-weight:700}
+.k10-card abbr{border-bottom:1px dotted #d95432;cursor:help}
+.k10-card template{display:none}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k10-card"</u>&gt;
+  &lt;<b>p</b>&gt;قیمت: &lt;<b>data</b> <i>value</i>=<u>"1500000"</u>&gt;۱٬۵۰۰٬۰۰۰ تومان&lt;/<b>data</b>&gt;&lt;/<b>p</b>&gt;
+  &lt;<b>p</b>&gt;انتشار: &lt;<b>time</b> <i>datetime</i>=<u>"2024-04-01"</u>&gt;فروردین ۱۴۰۳&lt;/<b>time</b>&gt;&lt;/<b>p</b>&gt;
+  &lt;<b>p</b>&gt;&lt;<b>abbr</b> <i>title</i>=<u>"HyperText Markup Language"</u>&gt;HTML&lt;/<b>abbr</b>&gt; برای ساختار صفحه است.&lt;/<b>p</b>&gt;
+
+  &lt;<b>template</b> <i>id</i>=<u>"project-template"</u>&gt;
+    &lt;<b>article</b> <i>class</i>=<u>"project-card"</u>&gt;
+      &lt;<b>h3</b>&gt;&lt;<b>slot</b> <i>name</i>=<u>"title"</u>&gt;عنوان جایگزین&lt;/<b>slot</b>&gt;&lt;/<b>h3</b>&gt;
+      &lt;<b>p</b>&gt;&lt;<b>slot</b> <i>name</i>=<u>"summary"</u>&gt;توضیح جایگزین&lt;/<b>slot</b>&gt;&lt;/<b>p</b>&gt;
+    &lt;/<b>article</b>&gt;
+  &lt;/<b>template</b>&gt;
+
+  &lt;<b>div</b> itemscope <i>itemtype</i>=<u>"https://schema.org/Person"</u>&gt;
+    &lt;<b>span</b> <i>itemprop</i>=<u>"name"</u>&gt;سارا محمدی&lt;/<b>span</b>&gt;
+    &lt;<b>meta</b> <i>itemprop</i>=<u>"jobTitle"</u> <i>content</i>=<u>"توسعه‌دهندهٔ فرانت‌اند"</u>&gt;
+  &lt;/<b>div</b>&gt;
+
+  &lt;<b>noscript</b>&gt;برای اجرای تعاملات این صفحه، JavaScript را فعال کنید.&lt;/<b>noscript</b>&gt;
+  &lt;<b>script</b> <i>type</i>=<u>"module"</u> <i>src</i>=<u>"/app.js"</u> defer&gt;&lt;/<b>script</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li><b>template</b> محتوای inert است؛ تا وقتی با JS clone نشود، روی صفحه نمایش داده نمی‌شود.</li><li><b>slot</b> فقط در shadow DOM و custom element معنی عملی دارد؛ در template معمولی محتوا را خودکار جاگذاری نمی‌کند.</li><li><b>data</b> متن قابل دیدن + value ماشین‌خوان؛ <b>time datetime</b> تاریخ/زمان استاندارد.</li><li><b>noscript</b> fallback برای وقتی JavaScript خاموش است؛ عملکرد اصلی صفحه نباید کاملاً به آن وابسته باشد.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>script را کجا و چطور بنویسم؟<small>classic و module</small></span></summary><div class="flash-body"><ul><li><code>defer</code> اسکریپت classic را بعد از parse اجرا می‌کند و ترتیب اسکریپت‌ها را حفظ می‌کند.</li><li><code>async</code> به محض دانلود اجرا می‌شود و ترتیب تضمین نیست؛ برای اسکریپت مستقل analytics.</li><li><code>type="module"</code> به‌صورت پیش‌فرض defer است و import/export دارد.</li><li>src خارجی را با <code>integrity</code> و <code>crossorigin</code> در صورت نیاز امن‌تر کن.</li></ul></div></details>
+<details class="flash"><summary><span>template چه مزیتی دارد؟<small>DOM inert و قابل clone</small></span></summary><div class="flash-body"><ul><li>HTML داخل template در صفحهٔ اصلی رندر نمی‌شود.</li><li>با <code>template.content.cloneNode(true)</code> یک نمونهٔ قابل افزودن می‌سازی.</li><li>برای تکرار کارت‌های پروژه بدون چسباندن stringهای HTML مفید است.</li><li>هنوز باید دادهٔ کاربر را با textContent یا روش امن وارد کنی؛ template جلوی XSS را خودکار نمی‌گیرد.</li></ul></div></details>
+<details class="flash"><summary><span>microdata یا JSON-LD؟<small>دو روش دادهٔ ساخت‌یافته</small></span></summary><div class="flash-body"><ul><li>microdata با itemscope/itemtype/itemprop داخل HTML قابل دیدن نوشته می‌شود.</li><li>JSON-LD بیرون از محتوای دیدنی و معمولاً خواناتر و قابل نگهداری‌تر است.</li><li>اطلاعات هر دو روش باید با محتوای صفحه همسان باشد.</li><li>برای پرتفولیو، JSON-LD Person ساده‌تر است؛ microdata را برای شناخت ساختار تگ‌ها یاد بگیر.</li></ul></div></details>
+</div></div>
+</article>
+<article class="lesson" id="l11">
+<div class="lesson-head"><span class="num">۱۱</span><div><h3>مرجع جامع عناصر HTML Living Standard</h3><p>فهرست کاربردی همهٔ خانواده‌های عناصر استاندارد امروزی؛ تگ‌های منسوخ هم جدا شده‌اند تا استفاده نکنی.</p></div>
+<div class="lesson-tools"><button type="button" class="done-btn" data-lesson="11" aria-pressed="false">✓ انجام شد</button></div></div>
+<div class="lesson-meta" aria-label="اهداف درس"><div class="meta-card"><b>خروجی یادگیری</b><span>جمع‌بندی: مفهوم را می‌فهمی و در پروژه به‌کار می‌بری.</span></div><div class="meta-card"><b>تمرین کوتاه</b><span>پرتفولیوی نهایی را بدون نگاه به درس‌نامه از صفر بساز و سپس با validator و DevTools بررسی کن.</span></div><div class="meta-card"><b>قاعدهٔ طلایی</b><span>هر خطایی که پیدا کردی را با علتش توضیح بده، نه فقط با حذف خط.</span></div></div><div class="mobile-note">📱 روی موبایل: کدها را افقی اسکرول کن؛ ساختار درس عمداً تک‌ستونه می‌شود تا متن و مثال خوانا بمانند.</div>
+<div class="pair">
+<div><p class="pane-title preview-title">◉ چیزی که کاربر می‌بیند</p><div class="preview"><div class="prev-stage"><div class="k11-table-wrap"><table class="k11-table"><thead><tr><th>خانواده</th><th>عناصر استاندارد</th><th>قاعدهٔ استفاده</th></tr></thead><tbody><tr><td>ساختار</td><td><code>header main footer nav section article aside</code></td><td class="yes">معنای واقعی بخش را بگو</td></tr><tr><td>متن</td><td><code>p h1-h6 strong em code time mark</code></td><td class="yes">معنی قبل از ظاهر</td></tr><tr><td>فرم</td><td><code>form input label select textarea button</code></td><td class="yes">label و type درست</td></tr><tr><td>منسوخ</td><td><code>center font marquee frame</code></td><td class="no">در پروژهٔ جدید استفاده نکن</td></tr></tbody></table></div></div></div></div>
+<div class="arrow" aria-hidden="true"><span><b>←</b>رابط<br>به کد</span></div>
+<div><p class="pane-title code-title">✦ استایل این بخش: داخل &lt;style&gt; در &lt;head&gt;</p><div class="code-wrap"><pre class="code css">.k11-table-wrap{background:#fff;border:1px solid #dbe3ef;border-radius:14px;overflow:auto}
+.k11-table{border-collapse:collapse;width:100%;min-width:620px;font-size:.76rem}
+.k11-table th,.k11-table td{text-align:right;padding:.45rem .55rem;border-bottom:1px solid #dbe3ef;vertical-align:top}
+.k11-table th{background:#17233b;color:#fff;position:sticky;top:0}
+.k11-table tr:nth-child(even){background:#f8faff}
+.k11-table code{direction:ltr;color:#d95432;font:11px monospace}
+.k11-table .no{color:#b13b2a;background:#fff0eb}
+.k11-table .yes{color:#147955;background:#e3f7ee}</pre></div>
+<p class="pane-title code-title" style="margin-top:.7rem">⌘ کد کامل این بخش در &lt;body&gt;</p><div class="code-wrap"><pre class="code">&lt;<b>section</b> <i>class</i>=<u>"k11-table-wrap"</u> <i>aria-labelledby</i>=<u>"element-reference"</u>&gt;
+  &lt;<b>h2</b> <i>id</i>=<u>"element-reference"</u>&gt;مرجع عناصر HTML&lt;/<b>h2</b>&gt;
+  &lt;<b>table</b> <i>class</i>=<u>"k11-table"</u>&gt;
+    &lt;<b>caption</b>&gt;عناصر استاندارد بر اساس خانوادهٔ کاربرد&lt;/<b>caption</b>&gt;
+    &lt;<b>thead</b>&gt;&lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"col"</u>&gt;خانواده&lt;/<b>th</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"col"</u>&gt;عناصر استاندارد&lt;/<b>th</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"col"</u>&gt;قاعدهٔ استفاده&lt;/<b>th</b>&gt;&lt;/<b>tr</b>&gt;&lt;/<b>thead</b>&gt;
+    &lt;<b>tbody</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;سند و متادیتا&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;html head title base link meta style&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;اطلاعات سند، اتصال منبع و CSS&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;ساختار&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;body header footer main nav section article aside address hgroup search&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;نقشهٔ معنایی صفحه&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;تیتر و بلوک متن&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;h1 h2 h3 h4 h5 h6 p div blockquote pre hr&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;سطح تیتر و پاراگراف را درست نگه دار&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;فهرست&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;ul ol li menu dl dt dd&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;ترتیب و رابطهٔ آیتم‌ها را مشخص کن&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;متن درون‌خطی&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;a abbr b bdi bdo br cite code data del dfn em i ins kbd mark q rp rt ruby s samp small span strong sub sup time u var wbr&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;معنی متن، نه فقط font-style&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;رسانه&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;img picture source audio video track map area&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;alt، کنترل و fallback&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;محتوای تعبیه‌شده&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;iframe embed object param&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;title، sandbox و منبع جایگزین&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;گرافیک&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;canvas svg&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;canvas با JS؛ SVG برای گرافیک برداری&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;تغییرات&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;del ins&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;حذف و افزودن نسخه‌ای را نشان بده&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;جدول&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;table caption colgroup col thead tbody tfoot tr th td&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;scope/headers و caption را فراموش نکن&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;فرم&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;form label input button select option optgroup textarea datalist fieldset legend output progress meter&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;کنترل native را به div تبدیل نکن&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;تعاملی&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;details summary dialog&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;رفتار native و قابل استفاده با کیبورد&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;اسکریپت و component&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;script noscript template slot&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;template inert، slot برای shadow DOM&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+      &lt;<b>tr</b>&gt;&lt;<b>th</b> <i>scope</i>=<u>"row"</u>&gt;دادهٔ ساخت‌یافته&lt;/<b>th</b>&gt;&lt;<b>td</b>&gt;&lt;<b>code</b>&gt;data time meta itemprop itemscope itemtype&lt;/<b>code</b>&gt;&lt;/<b>td</b>&gt;&lt;<b>td</b>&gt;متن انسان و مقدار ماشین را جدا کن&lt;/<b>td</b>&gt;&lt;/<b>tr</b>&gt;
+    &lt;/<b>tbody</b>&gt;
+  &lt;/<b>table</b>&gt;
+&lt;/<b>section</b>&gt;</pre></div></div>
+</div>
+<ul class="fine"><li>این فهرست عناصر استاندارد امروزی را بر اساس کاربرد جمع می‌کند؛ بعضی عناصر مثل <code>param</code> در مرورگرها legacy هستند و برای پروژهٔ جدید انتخاب خوبی نیستند.</li><li>تگ‌هایی مثل <code>br</code>، <code>hr</code> و <code>img</code> محتوای داخلی ندارند و void element هستند؛ برایشان closing tag ننویس.</li><li>هر تگ را بر اساس content model خودش داخل والد مناسب بگذار؛ nesting نامعتبر ممکن است DOM را توسط parser جابه‌جا کند.</li></ul>
+<div class="cards"><p class="cards-title">فلش‌کارت — ریزنکات این بخش</p><div class="card-grid">
+<details class="flash"><summary><span>void element چیست؟<small>تگ بدون closing tag</small></span></summary><div class="flash-body"><ul><li>عناصر void محتوای فرزند ندارند: area، base، br، col، embed، hr، img، input، link، meta، source، track، wbr.</li><li>نوشتن <code>&lt;img&gt;&lt;/img&gt;</code> غلط/بی‌اثر است؛ همان <code>&lt;img ...&gt;</code> کافی است.</li><li>اسلش پایانی در HTML مثل <code>&lt;br /&gt;</code> الزامی نیست؛ فرم HTML را با XML قاطی نکن.</li><li>meta، link و input هم void هستند.</li></ul></div></details>
+<details class="flash"><summary><span>Global attributes کدام‌اند؟<small>ویژگی‌هایی که تقریباً همه‌جا می‌آیند</small></span></summary><div class="flash-body"><ul><li>id، class، style، title، lang، dir، hidden، inert، tabindex، data-*، contenteditable، draggable، spellcheck، translate.</li><li>role، aria-* و slot/is برای سناریوهای ویژه‌اند؛ ARIA را جای semantic HTML نگذار.</li><li>accesskey را با احتیاط استفاده کن چون با میانبرهای سیستم و صفحه‌خوان تداخل دارد.</li><li>id یکتا، class برای گروه، data-* برای دادهٔ سفارشی DOM است.</li></ul></div></details>
+<details class="flash"><summary><span>عناصر obsolete را بشناسم؟<small>یادگیری برای تشخیص کد قدیمی</small></span></summary><div class="flash-body"><ul><li>center، font، big، strike، tt، marquee، frame، frameset، noframes، acronym، dir و keygen را استفاده نکن.</li><li>ظاهر آن‌ها با CSS و ساختار آن‌ها با تگ معنایی جدید جایگزین می‌شود.</li><li>bgsound، blink، plaintext و xmp نیز legacy/obsolete هستند.</li><li>در مستندات ممکن است برای مهاجرت ببینی‌شان، نه برای ساخت پروژهٔ جدید.</li></ul></div></details>
+<details class="flash"><summary><span>HTML parser چرا مهم است؟<small>DOM واقعی همیشه عین متن نیست</small></span></summary><div class="flash-body"><ul><li>مرورگر تگ‌های ناقص یا nesting نامعتبر را اصلاح می‌کند و ممکن است درخت DOM دیگری بسازد.</li><li>مثلاً قرار دادن block داخل p باعث بسته‌شدن ضمنی p می‌شود.</li><li>برای اشکال‌زدایی، Elements panel را با source متن یکی فرض نکن.</li><li>اعتبارسنجی با Nu HTML Checker یا ابزارهای lint کمک می‌کند.</li></ul></div></details>
+</div></div>
+</article>
+</div></section>
+<section class="section" id="reference"><div class="wrap"><div class="section-title"><div><span class="label">۲ / مرجع سریع</span><h2>عناصر HTML به تفکیک خانواده</h2></div><p>این جدول برای مرور سریع است؛ توضیح عمیق عناصر مهم را در کورس‌های بالا با کد کامل خواندی.</p></div>
+<div class="cheat"><table class="cheat-table"><caption>مرجع کاربردی عناصر HTML</caption><thead><tr><th scope="col">خانواده</th><th scope="col">عناصر استاندارد</th><th scope="col">نکته</th></tr></thead><tbody>
+<tr><th scope="row">سند و head</th><td><code>html head title base link meta style</code></td><td>متادیتا، منبع و CSS؛ داخل head</td></tr>
+<tr><th scope="row">ساختار</th><td><code>body header footer main nav section article aside address hgroup search</code></td><td>نقاط عطف و معماری محتوا</td></tr>
+<tr><th scope="row">تیتر و بلوک</th><td><code>h1 h2 h3 h4 h5 h6 p div blockquote pre hr</code></td><td>سطح تیتر را برای معنا انتخاب کن</td></tr>
+<tr><th scope="row">فهرست</th><td><code>ul ol li menu dl dt dd</code></td><td>ترتیب و رابطهٔ آیتم‌ها</td></tr>
+<tr><th scope="row">متن درون‌خطی</th><td><code>a abbr b bdi bdo br cite code data del dfn em i ins kbd mark q rp rt ruby s samp small span strong sub sup time u var wbr</code></td><td>معنا مهم‌تر از شکل ظاهری</td></tr>
+<tr><th scope="row">رسانه</th><td><code>img picture source audio video track map area</code></td><td>alt، fallback، کنترل و زیرنویس</td></tr>
+<tr><th scope="row">تعبیه‌شده</th><td><code>iframe embed object param</code></td><td>title، sandbox و منبع جایگزین</td></tr>
+<tr><th scope="row">گرافیک</th><td><code>canvas svg</code></td><td>SVG برای شکل ثابت؛ canvas با JS</td></tr>
+<tr><th scope="row">جدول</th><td><code>table caption colgroup col thead tbody tfoot tr th td</code></td><td>caption و scope را فراموش نکن</td></tr>
+<tr><th scope="row">فرم</th><td><code>form label input button select option optgroup textarea datalist fieldset legend output progress meter</code></td><td>کنترل native را با div تقلید نکن</td></tr>
+<tr><th scope="row">تعامل</th><td><code>details summary dialog</code></td><td>رفتار بومی و قابل استفاده با کیبورد</td></tr>
+<tr><th scope="row">اسکریپت/component</th><td><code>script noscript template slot</code></td><td>template inert؛ slot برای shadow DOM</td></tr>
+<tr><th scope="row">دادهٔ ماشین‌خوان</th><td><code>data time meta itemprop itemscope itemtype</code></td><td>متن قابل دیدن + مقدار استاندارد</td></tr>
+</tbody></table></div>
+<div class="references" style="margin-top:1rem"><h3>منابع رسمی برای ادامهٔ مطالعه</h3><ul><li><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer">WHATWG HTML Living Standard</a> — استاندارد زنده و مرجع هنجاری HTML.</li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements" target="_blank" rel="noopener noreferrer">MDN HTML elements reference</a> — توضیح کاربردی عناصر و ویژگی‌ها.</li><li><a href="https://html.spec.whatwg.org/multipage/obsolete.html" target="_blank" rel="noopener noreferrer">WHATWG obsolete features</a> — تگ‌ها و ویژگی‌هایی که در پروژهٔ جدید نباید استفاده شوند.</li><li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" rel="noopener noreferrer">MDN Accessibility</a> — دسترس‌پذیری و فناوری‌های کمکی.</li></ul><p class="micro">استاندارد HTML یک Living Standard است؛ قبل از استفاده از ویژگی‌های تازه مثل popover، پشتیبانی مرورگر هدف را بررسی کن.</p></div>
+</div></section>
+<section class="section" id="checklist"><div class="wrap"><div class="section-title"><div><span class="label">۳ / تحویل</span><h2>چک‌لیست دقیق پروژه</h2></div><p>قبل از اینکه بگویی تمرین تمام شده، این موارد را دستی آزمایش کن.</p></div><ul class="checklist"><li>DOCTYPE، lang="fa"، dir="rtl" و UTF-8 درست هستند.</li><li>title، description، canonical و viewport نوشته شده‌اند.</li><li>یک h1، headingهای مرتب و sectionهای دارای عنوان دارم.</li><li>header/nav/main/footer و landmarkهای واقعی استفاده شده‌اند.</li><li>لینک‌های داخلی به id یکتا می‌رسند و متن لینک واضح است.</li><li>تصویر width/height و alt دارد؛ تصویر تزئینی alt خالی دارد.</li><li>جدول caption، thead/tbody/tfoot، th و scope دارد.</li><li>هر کنترل فرم label، name و type درست دارد.</li><li>فرم هم اعتبارسنجی HTML دارد هم قرار است سمت سرور بررسی شود.</li><li>صوت و ویدیو controls، fallback و track مناسب دارند.</li><li>با Tab، Enter و Space کل تعاملات کار می‌کنند.</li><li>focus دیده می‌شود و رنگ تنها راه اعلام وضعیت نیست.</li><li>انیمیشن در prefers-reduced-motion کاهش می‌یابد.</li><li>تگ‌های منسوخ مثل center، font، marquee و frame استفاده نشده‌اند.</li></ul><div class="warning"><b>تمرین عملی نهایی:</b> همین درس‌نامه را کنار بگذار و پرتفولیوی خودت را از صفر بساز. بعد با HTML validator، DevTools و Lighthouse آن را بررسی کن. فرق «دیدن کد» و «توانستن ساختن» همین‌جاست.</div></div></section>
+</main>
+<nav class="mobile-bottom" aria-label="ناوبری سریع"><a href="#lessons">درس‌ها</a><a href="#reference">مرجع</a><a href="#checklist">چک‌لیست</a></nav>
+<footer class="wrap footer"><span>درس‌نامهٔ عمیق پروژهٔ پرتفولیو با HTML — از ساختار تا Living Standard</span><a href="#top">بازگشت به بالا ↑</a></footer>
+
+<script src="script.js" defer></script>
+</body></html>
