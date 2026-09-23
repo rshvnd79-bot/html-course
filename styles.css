@@ -514,3 +514,39 @@ summary{display:flex;align-items:center}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.arrow{display:none}.card-grid,.cards__grid{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.card-grid,.cards__grid{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:.5rem}.hero-board{order:-1}}
 
+
+
+/* =========================================================
+   Expanded course system — deep educational layer
+   ========================================================= */
+.research-note{display:flex;gap:.6rem;align-items:center;margin:0 auto 1rem;max-width:var(--wrap,1180px);padding:.8rem 1rem;border:1px solid rgba(77,91,255,.16);background:linear-gradient(135deg,rgba(77,91,255,.07),rgba(24,200,173,.06));border-radius:14px;color:#4f5c73;font-size:.86rem}
+.research-note strong{color:#26345b}
+.deep-dive{margin:1.2rem 0 1.4rem;display:grid;gap:1rem}
+.deep-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:1rem}
+.deep-grid.deep-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.deep-card{background:linear-gradient(180deg,#fff,#fbfcff);border:1px solid #e0e6f0;border-radius:18px;padding:1.15rem;box-shadow:0 12px 30px rgba(31,45,75,.06)}
+.deep-card h4{margin:.05rem 0 .65rem;font-size:1rem;color:#1f2a44}
+.deep-card h5{margin:1rem 0 .4rem;font-size:.92rem;color:#46536e}
+.deep-card p{margin:.4rem 0;line-height:2}
+.deep-muted{color:#6c7890;font-size:.86rem}
+.deep-points,.deep-card>ul{margin:.2rem 0 0;padding-inline-start:1.25rem}
+.deep-points li,.deep-card>ul li{margin:.55rem 0;line-height:1.9}
+.deep-points strong{color:#32476e}
+.deep-code-card{padding-bottom:.8rem}
+.deep-example{direction:ltr;text-align:left;white-space:pre;overflow:auto;margin:.7rem 0 0;padding:1rem;border-radius:14px;background:#111827;color:#eef2ff;line-height:1.65;font:500 .78rem/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;tab-size:2}
+.deep-card.warning{border-inline-start:4px solid #e77b62}
+.deep-card.gold{border-inline-start:4px solid #d9a441}
+.deep-card.exercise{background:linear-gradient(135deg,rgba(72,91,255,.06),rgba(42,198,172,.06))}
+.deep-card.sources{background:#f8faff}
+.deep-card.sources a{color:#315ed2;text-decoration:none}
+.deep-card.sources a:hover{text-decoration:underline}
+.preview-caption{font-size:.72rem;font-weight:800;color:#65728a;margin:0 0 .55rem;padding-inline:.15rem}
+.version-badge{display:inline-flex;margin:.8rem auto 0;padding:.35rem .65rem;border-radius:999px;background:#eef2ff;color:#4354a5;font-size:.72rem;font-weight:800}
+.lesson .pair{align-items:start}
+@media (max-width:800px){
+  .deep-grid,.deep-grid.deep-two{grid-template-columns:1fr}
+  .deep-card{padding:1rem;border-radius:15px}
+  .research-note{margin-inline:1rem;font-size:.78rem;align-items:flex-start}
+  .deep-example{font-size:.72rem}
+}
+@media (prefers-reduced-motion:reduce){.deep-card{scroll-behavior:auto}}

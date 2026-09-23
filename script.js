@@ -1,4 +1,4 @@
-document.querySelectorAll('.flash').forEach((card) => {
+document.querySelectorAll('.flash').forEach((card) =>
 card.addEventListener('toggle', () => {
 if (
 card.open &&
@@ -9,14 +9,11 @@ behavior: 'smooth',
 block: 'nearest'
 });
 }
-});
-});
+})
+);
 
 // Learning progress: intentionally local to this browser.
-const doneButtons = [
-...document.querySelectorAll('.done-btn')
-];
-
+const doneButtons = [...document.querySelectorAll('.done-btn')];
 const progressBar = document.querySelector('.progress-track i');
 const progressText = document.querySelector('[data-progress-text]');
 
@@ -43,7 +40,7 @@ btn.textContent = on
 });
 
 const pct = Math.round(
-done.size / 12 * 100
+(done.size / 12) * 100
 );
 
 if (progressBar) {
@@ -57,7 +54,7 @@ done.size + ' از ۱۲ درس';
 }
 };
 
-doneButtons.forEach((btn) => {
+doneButtons.forEach((btn) =>
 btn.addEventListener('click', () => {
 const id = btn.dataset.lesson;
 
@@ -73,8 +70,8 @@ JSON.stringify([...done])
 );
 
 paint();
-});
-});
+})
+);
 
 paint();
 
@@ -111,6 +108,6 @@ rootMargin: '-25% 0px -65% 0px'
 }
 );
 
-lessons.forEach((x) => {
-observer.observe(x);
-});
+lessons.forEach((x) =>
+observer.observe(x)
+);
